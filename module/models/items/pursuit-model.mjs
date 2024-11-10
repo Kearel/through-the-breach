@@ -1,4 +1,7 @@
+import { TalentData } from "./talent-model.mjs";
+
 const { HTMLField, NumberField, SchemaField, StringField, ArrayField } = foundry.data.fields;
+
 
 export class PursuitData extends TalentData {
     static defineSchema() {
