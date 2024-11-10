@@ -1,8 +1,10 @@
 {
 	"id" : "through-the-breach",
 	"title" : "Through The Breach",
-	"description" : "An unofficial implementation of the Malifaux RPG",
+	"description" : "An unofficial implementation of the Malifaux RPG. ALPHA VERSION.",
 	"version" : "0.0.1",
+	"url" : "https://github.com/Kearel/through-the-breach",
+	"manifest": "https://raw.githubusercontent.com/Kearel/through-the-breach/main/system.json",
 	"compatibility" : {
 		"minimum" : 12,
 		"verified" : 12
