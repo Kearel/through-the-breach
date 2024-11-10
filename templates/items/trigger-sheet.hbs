@@ -1,0 +1,28 @@
+<form class="trigger" autocomplete="off">
+    {{log this}}
+    <section class="content">
+        <div>
+            <h1>Basic</h1>
+            <label>Name</label>
+            <input name="name" type="text" value="{{name}}">
+            <label>Description</label>
+            <textarea name="system.description" rows="4" cols="50">{{description}}</textarea>
+            <div>
+                <div class="form-group">
+                    <label>Suit</label>
+                    <select name="system.suit">
+                        {{#select suit}}
+                        {{#each suits as |s|}}
+                        <option value="{{s}}">{{capitalize s}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Skill</label>
+                    <input name="system.skill" type="text" value="{{skill}}">
+                </div>
+            </div>
+        </div>
+    </section>
+</form>

@@ -1,0 +1,68 @@
+<form class="talent" autocomplete="off">
+    {{log this}}
+    <section class="content"></section>
+    <section class="GMOnly">
+        <div class="flexcol">
+            <h1>Basic</h1>
+            <div class="flexrow">
+                <label>Name:</label>
+                <input id="origin" name="name" type="text" value="{{name}}">
+            </div>
+            <div class="flexrow">
+                <label for="desc">Description:</label>
+                <textarea id="desc" name="system.description" rows="4" cols="50">{{description}}</textarea>
+            </div>
+            <div class="flexrow">
+                <label for="origin">Origin:</label>
+                <input  id="origin" name="system.origin" value="{{origin}}" type="text">
+            </div>
+            <div class="flexcol">
+                <h1>Modifiers</h1>
+                <table class="item-list" data-itemtype="modification">
+                    <tr>
+                        <th>Operation</th>
+                        <th>Against</th>
+                        <th>Value</th>
+                        <th></th>
+                    </tr>
+                    {{#each modifications as |modification key|}}
+                    <tr class="item" data-index="{{key}}">
+                        <td><input type="text" name="system.modifications.{{key}}.operation" value="{{modification.operation}}"></td>
+                        <td><input type="text" name="system.modifications.{{key}}.against" value="{{modification.against}}"></td>
+                        <td><input type="text" name="system.modifications.{{key}}.value" value="{{modification.value}}"></td>
+                        <td><a class="removerow"><i class="fas fa-trash"></i></a></td></td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a class="addrow"><i class="fas fa-plus"></i></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="flexcol">
+                <h1>Derived Modifiers</h1>
+                <table class="item-list" data-itemtype="derived">
+                    <tr>
+                        <th>For</th>
+                        <th>Skill</th>
+                        <th></th>
+                    </tr>
+                    {{#each derived_modifiers as |modification key|}}
+                    <tr class="item" data-index="{{key}}">
+                        <td><input type="text" name="system.new_possible_derived_modifiers.{{key}}.for" value="{{modification.for}}"></td>
+                        <td><input type="text" name="system.new_possible_derived_modifiers.{{key}}.skill" value="{{modification.skill}}"></td>
+                        <td>
+                        <td><a class="removerow"><i class="fas fa-trash"></i></a></td></td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a class="addrow"><i class="fas fa-plus"></i></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</form>

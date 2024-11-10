@@ -1,0 +1,66 @@
+<div autocomplete="off">
+    <h3>{{title}}</h3>
+    <div class="flexrow">
+        <div>
+            <h4>{{{subtitle}}}</h4>
+            <div style="width:500px;height:500px;">
+                {{#if FATE}}
+                    <div class="flexcol">
+                        <center>
+                            {{#each fate as |fate index|}}
+                                <label class="fate_display">{{fate.fate}}</label>
+                                <br>
+                            {{/each}}
+                        </center>
+                    </div>
+                {{else}}
+                    {{#each tarot.steps as |display index|}}
+                        {{#if display.did_draw}}
+                            <div class="flexcol" style="position:absolute; left:{{display.options.left}}px; top:{{display.options.top}}px">
+                                <img src="{{display.drawn.0.faces.0.img}}" width="70">
+                                <center><label><b>{{display.label}}</b></label></center>
+                            </div>
+                        {{/if}}
+                    {{/each}}
+                {{/if}}
+            </div>
+            {{#if available_skills}}<div class="flexrow">Skill: <select id="select_skill">{{selectOptions available_skills}}</select><p class="flex2" id="desc_skill"></p></div>{{/if}}
+            <center class="flexrow">
+                {{#if SHOW_MODIFY}}<button data-index="0" class="draggable_value draggable">+1</button> <button data-index="1" class="skill_value">2</button>{{/if}}
+                {{#if draggable_values}}{{#each draggable_values as |value index|}}<button data-index={{index}} class="draggable_value draggable">{{value}}</button>{{/each}}{{/if}}
+                {{#if clickable_values}}{{#each clickable_values as |value index|}}<button data-index={{index}} class="skill_value">{{value}}</button>{{/each}}{{/if}}
+            </center>
+            <center>{{{instructions}}}</center>
+            <table>
+                <tr>
+                    {{#each body_aspects as |aspect key|}}
+                    
+                        <th data-index={{key}} data-type="BODY" {{#if ../ASPECT_BODY}}class="dropAspect"{{/if}}>{{capitalize key}}</th>
+                    {{/each}}
+                    {{#each mind_aspects as |aspect key|}}
+                        <th data-index={{key}} data-type="MIND" {{#if ../ASPECT_MIND}}class="dropAspect"{{/if}}>{{capitalize key}}</th>
+                    {{/each}}
+                </tr>
+                <tr>
+                    {{#each body_aspects as |aspect key|}}
+                        <td align="center">{{aspect}}</td>
+                    {{/each}}
+                    {{#each mind_aspects as |aspect key|}}
+                        <td align="center">{{aspect}}</td>
+                    {{/each}}
+                </tr>
+            </table>
+        </div>
+        <div>
+            <b><h4>Skills</h4></b>
+            <hr>
+            {{#each skills as |skill|}}
+            <div>{{skill.name}} - {{skill.value}}</div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="flexrow">
+        <button class="back_step" {{#unless can_back}}disabled{{/unless}}>Back</button>
+        <button class="continue_step" {{#unless can_continue}}disabled{{/unless}}>{{#if last_step}}Finish{{else}}Continue{{/if}}</button>
+    </div>
+</div>

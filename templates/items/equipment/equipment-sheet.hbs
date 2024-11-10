@@ -1,0 +1,107 @@
+<form class="equipment" autocomplete="off">
+    <nav class="tabs" data-group="primary">
+        <a class="item" data-tab="basic">Basic</a>
+        <a class="item" data-tab="modifications">Modifications</a>
+        <a class="item" data-tab="effects">Effects</a>
+    </nav>
+    <section class="content">
+        <div class="tab flexcol" data-tab="basic">
+            <div class="flexrow">
+                <label>Name:</label>
+                <input name="name" type="text" value="{{name}}">
+            </div>
+            <div class="flexrow">
+                <label>Type:</label>
+                <select name="system.type">
+                    {{#select type}}
+                    {{#each types as |t i|}}
+                    <option value="{{t}}">{{capitalize t}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div class="flexrow">
+                {{#if editable}}
+                <table class="item-list" data-itemtype="special">
+                    <tr>
+                        <th>Tags</th>
+                        <th></th>
+                    </tr>
+                    {{#each special as |tag index|}}
+                    <tr class="item" data-index="{{index}}">
+                        <td><input type="text" value="{{tag.tag}}" {{#if tag.builtin}} name="system.special.{{index}}" {{else}}disabled="disabled"{{/if}}></td>
+                        <td>{{#if tag.builtin}}<a class="removerow"><i class="fas fa-trash"></i></a>{{/if}}</td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td></td>
+                        <td><a class="addrow"><i class="fas fa-plus"></i></a></td>
+                    </tr>
+                </table>
+                {{else}}
+                {{/if}}
+            </div>
+            <div class="flexrow">
+                <table class="item-list" data-itemtype="attack">
+                    <tr>
+                        <th>Melee</th>
+                        <th>Range</th>
+                        <th>Weak</th>
+                        <th>Moderate</th>
+                        <th>Severe</th>
+                        <th>Skill</th>
+                        <th></th>
+                    </tr>
+                    {{#each attacks as |attack index|}}
+                    <tr class="item" data-index="{{index}}">
+                        <td><input type="checkbox" {{#if attack.melee}}checked{{/if}} {{#if attack.builtin}}name="system.attacks.{{index}}.melee" {{else}} disabled="disabled">{{/if}}</td>
+                        <td><input type="number" value="{{attack.range}}" {{#if attack.builtin}}name="system.attacks.{{index}}.range" {{else}} disabled="disabled">{{/if}}</td>
+                        <td><input type="number" value="{{attack.weak_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.weak_damage" {{else}} disabled="disabled">{{/if}}</td>
+                        <td><input type="number" value="{{attack.moderate_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.moderate_damage" {{else}} disabled="disabled">{{/if}}</td>
+                        <td><input type="number" value="{{attack.severe_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.severe_damage" {{else}} disabled="disabled">{{/if}}</td>
+                        <td><input type="text" value="{{attack.skill}}" {{#if attack.builtin}}name="system.attacks.{{index}}.skill" {{else}} disabled="disabled">{{/if}}</td>
+                        {{#if attack.builtin}}<td><a class="removerow"><i class="fas fa-trash"></i></a></td>{{/if}}
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="addrow"><i class="fas fa-plus"></i></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab flexcol" data-tab="modifications">
+            <table>
+                <tr>
+                    <th>Modification</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+        <div class="tab flexcol" data-tab="effects">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Effect</th>
+                    <th></th>
+                </tr>
+                {{#each effects as |effect index|}}
+                <tr class="effect" data-effect="{{effect._id}}">
+                    <td><img src="{{effect.img}}" width="32" height="32"></td>
+                    <td><a class="editeffect"><i class="fas fa-pen-to-square"></i></a><a class="removeeffect"><i class="fas fa-trash"></i></a></td>
+                </tr>
+                {{/each}}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><a class="addeffect"><i class="fas fa-plus"></i></a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</form>

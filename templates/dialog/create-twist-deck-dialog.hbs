@@ -1,0 +1,42 @@
+<div class="flexcol">
+    <div class="flexrow">
+        <div>
+            <h3>Defining</h3>
+            <p>1,5,9,13</p>
+            <select id="def">
+                {{#each choices as |choice index|}}
+                <option value="{{choice}}">{{capitalize choice}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="suit_target">
+            <h3>Ascendant</h3>
+            <p>4,8,12</p>
+            <select id="asc">
+                {{#each choices as |choice index|}}
+                <option value="{{choice}}">{{capitalize choice}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+    <div class="flexrow">
+        <div class="suit_target">
+            <h3>Center</h3>
+            <p>3,7,11</p>
+            <select id="center">
+                {{#each choices as |choice index|}}
+                <option value="{{choice}}">{{capitalize choice}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="suit_target">
+            <h3>Descendant</h3>
+            <p>2,6,10</p>
+            <select id="desc">
+                {{#each choices as |choice index|}}
+                <option value="{{choice}}">{{capitalize choice}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+</div>

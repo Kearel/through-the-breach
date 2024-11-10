@@ -1,0 +1,122 @@
+<form class="fatemaster" autocomplete="off">
+    <div class="flexcol">
+        {{#if editable}}
+        <div class="flexrow">
+            <h3><input type="text" name="name" value="{{actor.name}}"></h3>
+        </div>
+        <div class="flexrow">
+            <input type="number" name="system.rank" value="{{actor.system.rank}}">
+            <input type="text" name="system.characteristics" value="{{actor.system.characteristics}}">
+        </div>
+        <div class="flexrow">
+            <table class="aspects">
+                <tr class="aspects">
+                    <td class="aspects aspect_header">
+                        <label>Might</label>
+                    </td>
+                    <td class="aspects">
+                        <input class="aspect_value" type="text" name="system.aspects.might" value="{{aspects.might}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Grace</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.aspects.grace" value="{{aspects.grace}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Speed</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.aspects.speed" value="{{aspects.speed}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Resilience</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.aspects.resilience" value="{{aspects.resilience}}" placeholder="0" data-dtype="Number">
+                    </td>
+                </tr>
+                <tr class="aspects">
+                    <td  class="aspects aspect_header">
+                        <label>Charm</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.aspects.charm" value="{{aspects.charm}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Intellect</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.aspects.intellect" value="{{aspects.intellect}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td  class="aspects aspect_header">
+                        <label>Cunning</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.aspects.cunning" value="{{aspects.speed}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Tenacity</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.aspects.tenacity" value="{{aspects.tenacity}}" placeholder="0" data-dtype="Number">
+                    </td>
+                </tr>
+                <tr class="aspects">
+                    <td class="aspects aspect_header">
+                        <label>Defense</label>
+                    </td>
+                    <td class="aspects">
+                        <input class="aspect_value" type="text" name="system.derived.defense" value="{{derived.defense}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Walk</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.derived.walk" value="{{derived.walk}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Height</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.derived.height" value="{{derived.height}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Initiative</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.derived.initiative" value="{{derived.initiative}}" placeholder="0" data-dtype="Number">
+                    </td>
+                </tr>
+                <tr class="aspects">
+                    <td  class="aspects aspect_header">
+                        <label>Willpower</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.derived.willpower" value="{{derived.willpower}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td class="aspects aspect_header">
+                        <label>Charge</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.derived.charge" value="{{derived.charge}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td  class="aspects aspect_header">
+                        <label>Wounds</label>
+                    </td>
+                    <td class="aspect">
+                        <input class="aspect_value" type="text" name="system.derived.wounds" value="{{derived.wounds}}" placeholder="0" data-dtype="Number">
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="flexrow">
+            
+        </div>
+        {{/if}}
+    </div>
+</form>

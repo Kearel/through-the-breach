@@ -1,0 +1,1470 @@
+{
+    "name": "Fate Deck",
+    "type": "deck",
+    "description": "",
+    "img": "icons/svg/card-hand.svg",
+    "system": {},
+    "cards": [
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/red_joker.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "Red Joker",
+        "type": "fate",
+        "_id": "84XVzmC0o3FEsUBe",
+        "description": "",
+        "system": {},
+        "value": 14,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "joker"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/black_joker.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "Black Joker",
+        "type": "fate",
+        "_id": "S8ApYxRlX0DWOEto",
+        "description": "",
+        "system": {},
+        "value": 0,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "joker"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/ace_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "1 of Rams",
+        "type": "fate",
+        "_id": "VtkjY1fO4fk9kzam",
+        "description": "",
+        "system": {},
+        "value": 1,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/9_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "9 of Tomes",
+        "type": "fate",
+        "_id": "Bn4iCTvw2RLBhGgz",
+        "description": "",
+        "system": {},
+        "value": 9,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/jack_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "11 of Tomes",
+        "type": "fate",
+        "_id": "Alv0fklXRMjQVZxr",
+        "description": "",
+        "system": {},
+        "value": 11,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/queen_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "12 of Crows",
+        "type": "fate",
+        "_id": "llmNDpvuW39QR5uc",
+        "description": "",
+        "system": {},
+        "value": 12,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/5_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "5 of Rams",
+        "type": "fate",
+        "_id": "RWpb6870ElXFd2Ht",
+        "description": "",
+        "system": {},
+        "value": 5,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/8_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "8 of Masks",
+        "type": "fate",
+        "_id": "zA7bm4LX6IE17NpI",
+        "description": "",
+        "system": {},
+        "value": 8,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/king_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "13 of Crows",
+        "type": "fate",
+        "_id": "VP8kgZrItKCbUdHJ",
+        "description": "",
+        "system": {},
+        "value": 13,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/4_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "4 of Masks",
+        "type": "fate",
+        "_id": "6VO7X3JDYFAaBCVB",
+        "description": "",
+        "system": {},
+        "value": 4,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/2_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "2 of Rams",
+        "type": "fate",
+        "_id": "3BpL0u4lQsQTAoUr",
+        "description": "",
+        "system": {},
+        "value": 2,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/5_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "5 of Masks",
+        "type": "fate",
+        "_id": "NWte6NX1Fd0gQr2k",
+        "description": "",
+        "system": {},
+        "value": 5,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/7_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "7 of Rams",
+        "type": "fate",
+        "_id": "vCltYypJb3vJlaUZ",
+        "description": "",
+        "system": {},
+        "value": 7,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/10_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "10 of Crows",
+        "type": "fate",
+        "_id": "bWTLm6YFYW1CcbgB",
+        "description": "",
+        "system": {},
+        "value": 10,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/6_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "6 of Rams",
+        "type": "fate",
+        "_id": "WYWqV4mLtUtMzhwB",
+        "description": "",
+        "system": {},
+        "value": 6,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/4_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "4 of Crows",
+        "type": "fate",
+        "_id": "ncvAfdFfU8Ww3JSr",
+        "description": "",
+        "system": {},
+        "value": 4,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/jack_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "11 of Rams",
+        "type": "fate",
+        "_id": "EWUWuQxBb9Xffzsz",
+        "description": "",
+        "system": {},
+        "value": 11,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/king_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "13 of Rams",
+        "type": "fate",
+        "_id": "cOVKT1yR13HcD5uZ",
+        "description": "",
+        "system": {},
+        "value": 13,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/queen_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "12 of Rams",
+        "type": "fate",
+        "_id": "xJnvnrVNQrz1iGmW",
+        "description": "",
+        "system": {},
+        "value": 12,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/9_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "9 of Rams",
+        "type": "fate",
+        "_id": "ujZie6M6eN7SqlsK",
+        "description": "",
+        "system": {},
+        "value": 9,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/2_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "2 of Tomes",
+        "type": "fate",
+        "_id": "XwOPMbMqkHzdIMd6",
+        "description": "",
+        "system": {},
+        "value": 2,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/6_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "6 of Tomes",
+        "type": "fate",
+        "_id": "TJILSAicSxm81QjY",
+        "description": "",
+        "system": {},
+        "value": 6,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/10_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "10 of Tomes",
+        "type": "fate",
+        "_id": "XabTjF3dRIZyP2xr",
+        "description": "",
+        "system": {},
+        "value": 10,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/3_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "3 of Tomes",
+        "type": "fate",
+        "_id": "xuxG4jk1q2P4Mqro",
+        "description": "",
+        "system": {},
+        "value": 3,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/king_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "13 of Tomes",
+        "type": "fate",
+        "_id": "ksJGIqUSi6fE0PGc",
+        "description": "",
+        "system": {},
+        "value": 13,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/ace_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "1 of Tomes",
+        "type": "fate",
+        "_id": "yJWUHbJNv0lW5J2D",
+        "description": "",
+        "system": {},
+        "value": 1,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/ace_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "1 of Masks",
+        "type": "fate",
+        "_id": "pD12ZLG2PIGvKwEi",
+        "description": "",
+        "system": {},
+        "value": 1,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/jack_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "11 of Crows",
+        "type": "fate",
+        "_id": "DiuQFqLbVYi0f1eG",
+        "description": "",
+        "system": {},
+        "value": 11,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/jack_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "11 of Masks",
+        "type": "fate",
+        "_id": "lZp49hR4sM1XFurm",
+        "description": "",
+        "system": {},
+        "value": 11,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/10_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "10 of Rams",
+        "type": "fate",
+        "_id": "8l2qjxciJcLpRrxe",
+        "description": "",
+        "system": {},
+        "value": 10,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/8_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "8 of Crows",
+        "type": "fate",
+        "_id": "inIZLedGx6L7EhGB",
+        "description": "",
+        "system": {},
+        "value": 8,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/9_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "9 of Masks",
+        "type": "fate",
+        "_id": "esVRSWErCL9GlbuT",
+        "description": "",
+        "system": {},
+        "value": 9,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/ace_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "1 of Crows",
+        "type": "fate",
+        "_id": "rfm8j5C4hQg1vk8v",
+        "description": "",
+        "system": {},
+        "value": 1,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/7_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "7 of Masks",
+        "type": "fate",
+        "_id": "BUs3Men42gAHkvvc",
+        "description": "",
+        "system": {},
+        "value": 7,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/9_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "9 of Crows",
+        "type": "fate",
+        "_id": "eXLHcZNgX7CwgdG3",
+        "description": "",
+        "system": {},
+        "value": 9,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/7_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "7 of Crows",
+        "type": "fate",
+        "_id": "8WdGgmjcmTcqoRJJ",
+        "description": "",
+        "system": {},
+        "value": 7,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/3_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "3 of Crows",
+        "type": "fate",
+        "_id": "emdywNTUWTndm4dK",
+        "description": "",
+        "system": {},
+        "value": 3,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/6_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "6 of Crows",
+        "type": "fate",
+        "_id": "1XPMNBFlZ1ZV3e6i",
+        "description": "",
+        "system": {},
+        "value": 6,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/3_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "3 of Rams",
+        "type": "fate",
+        "_id": "hhga2qOXZlE3ApB5",
+        "description": "",
+        "system": {},
+        "value": 3,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/2_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "2 of Crows",
+        "type": "fate",
+        "_id": "1Z3z3eKkBBKvZc5g",
+        "description": "",
+        "system": {},
+        "value": 2,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/7_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "7 of Tomes",
+        "type": "fate",
+        "_id": "AHexzDSF5wHIUNgt",
+        "description": "",
+        "system": {},
+        "value": 7,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/5_of_spades.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "5 of Crows",
+        "type": "fate",
+        "_id": "sF6JY6IIEpMue9AH",
+        "description": "",
+        "system": {},
+        "value": 5,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "crows"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/3_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "3 of Masks",
+        "type": "fate",
+        "_id": "3JNfcJ0aYwwG0BJF",
+        "description": "",
+        "system": {},
+        "value": 3,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/2_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "2 of Masks",
+        "type": "fate",
+        "_id": "pcHLFsD2La28DWMU",
+        "description": "",
+        "system": {},
+        "value": 2,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/6_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "6 of Masks",
+        "type": "fate",
+        "_id": "gdoTeZnPgv2KdVVr",
+        "description": "",
+        "system": {},
+        "value": 6,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/queen_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "12 of Masks",
+        "type": "fate",
+        "_id": "Kx5q0cgSa26DtoTy",
+        "description": "",
+        "system": {},
+        "value": 12,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/10_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "10 of Masks",
+        "type": "fate",
+        "_id": "HJZQA7vBFUe28ivG",
+        "description": "",
+        "system": {},
+        "value": 10,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/8_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "8 of Tomes",
+        "type": "fate",
+        "_id": "uftPVr1ySsxZvr2i",
+        "description": "",
+        "system": {},
+        "value": 8,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/4_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "4 of Rams",
+        "type": "fate",
+        "_id": "OP06HwQ86dIs6wqJ",
+        "description": "",
+        "system": {},
+        "value": 4,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/8_of_hearts.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "8 of Rams",
+        "type": "fate",
+        "_id": "DEpYw9og3zAuowXL",
+        "description": "",
+        "system": {},
+        "value": 8,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "rams"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/5_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "5 of Tomes",
+        "type": "fate",
+        "_id": "jvTvV3r4LuUbVha5",
+        "description": "",
+        "system": {},
+        "value": 5,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/queen_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "12 of Tomes",
+        "type": "fate",
+        "_id": "3VM0gGQAbllP65km",
+        "description": "",
+        "system": {},
+        "value": 12,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/4_of_clubs.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "4 of Tomes",
+        "type": "fate",
+        "_id": "iVJQYsNQ0qJLsx8G",
+        "description": "",
+        "system": {},
+        "value": 4,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "tomes"
+      },
+      {
+        "faces": [
+          {
+            "name": "",
+          "img": "systems/through-the-breach/assets/images/king_of_diamonds.png",
+            "text": ""
+          }
+        ],
+        "face": 0,
+        "name": "13 of Masks",
+        "type": "fate",
+        "_id": "lwCEs7HnkmN15ASy",
+        "description": "",
+        "system": {},
+        "value": 13,
+        "back": {
+          "text": "",
+          "img": null,
+          "name": ""
+        },
+        "drawn": false,
+        "origin": null,
+        "rotation": 0,
+        "sort": 0,
+        "flags": {},
+        "suit": "masks"
+      }
+    ],
+    "rotation": 0,
+    "displayCount": false,
+    "folder": null
+}

@@ -1,0 +1,2573 @@
+{
+    "label": "Cross Roads Tarot",
+    "description" : "The Cross Roads Tarot is designed to create human characters who have recently arrived in Malifaux.",
+    "steps" : [
+        {
+            "label" : "Station",
+            "subtitle" : "The station card represents how you were brought up and by who.",
+            "instructions" : "<b>{label}:</b> {background} <br>Your station skill is <b>{value}</b>. ",
+            "mode" : "NONE",
+            "results" : {
+                "crows": {
+                    "1": {
+                        "fate": "and you will call upon the crow.",
+                        "label": "Undead",
+                        "value": "Centering",
+                        "background": "Just because your parents were dead doesn't mean that they didn't love you. Your childhood was odd, to say the least, and you worked hard to keep your family's secret."
+                    },
+                    "10": {
+                        "fate": "and you are a breeze unto the leaves.",
+                        "label": "Assassin",
+                        "value": "Long Arms",
+                        "background": "One of your parents was often gone for long periods of time, though they always sent money back to support the family. One day, you learned why."
+                    },
+                    "11": {
+                        "fate": "and you will let your blood run cold.",
+                        "label": "Artist",
+                        "value": "Art",
+                        "background": "You likely spent your youth helping to mix paint, tighten canvas, or prepare stone for chiseling. Your family contained at least one practicing artist, and you learned to appreciate, or at least understand, the world of an artist."
+                    },
+                    "12": {
+                        "fate": "and you seek the sound of your last breath.",
+                        "label": "Medical",
+                        "value": "Doctor",
+                        "background": "One of your parents was a medical professional who tended to the needs of the sick and injured. Your family was likely well respected in your community."
+                    },
+                    "13": {
+                        "fate": "and you stumble upon the line of life and death.",
+                        "label": "Graverobber",
+                        "value": "Necromancy",
+                        "background": "It's amazing how much treasure rich people will just bury. Stealing from the dead is an easy means of garnering wealth, and it kept your entire family fed and clothed."
+                    },
+                    "2": {
+                        "fate": "and the end will come to all.",
+                        "label": "Orphan",
+                        "value": "Evade",
+                        "background": "With no family to speak of, you spent your childhood either in the children's work houses of a major city or dodging the truancy officials on the streets."
+                    },
+                    "3": {
+                        "fate": "and you will be maimed.",
+                        "label": "Dabbler",
+                        "value": "Prestidigitation",
+                        "background": "Your family secretly dabbled in the magical arts, trading dusty tomes with dangerous people. The search for esoteric power, however, was often its own reward, and you grew up memorizing whatever snippets of power you could glimpse over your parents' shoulders."
+                    },
+                    "4": {
+                        "fate": "and the mage's knee bends before your river.",
+                        "label": "Soldier",
+                        "value": "Heavy Guns",
+                        "background": "One (or both) of your parents was enlisted in the military. You may have traveled all across the world or stayed in one place, but either way you grew up in a fiercely patriotic and strict household."
+                    },
+                    "5": {
+                        "fate": "and the noose will snap like thunder.",
+                        "label": "Hermit",
+                        "value": "Wilderness",
+                        "background": "For whatever reason, you parents choose to sequester themselves from civilization. You grew up with little social contact other than the members of your immediate family, but eventually you rejoined the world. This rugged lifestyle taught you a lot about the wilderness."
+                    },
+                    "6": {
+                        "fate": "and with a whisper you will sunder the walls.",
+                        "label": "Mortuary Staff",
+                        "value": "Stitching",
+                        "background": "Running a mortuary is often a family affair. Children are raised to take over the family business, a macabre but necessary trade for any city or town."
+                    },
+                    "7": {
+                        "fate": "and the penny paid is thrice earned.",
+                        "label": "Outlaw",
+                        "value": "Toughness",
+                        "background": "Roaming the wilderness between towns, your family made a living robbing travelers and evading the law."
+                    },
+                    "8": {
+                        "fate": "and you will burn the oldest page.",
+                        "label": "Mercenary",
+                        "value": "Athletics",
+                        "background": "One (or both) of your parents was a sell-sword who provided military services to those who could afford it. You may have spent time staying with family while they were away, or you may have traveled with them."
+                    },
+                    "9": {
+                        "fate": "and the crime that you hide will destroy you.",
+                        "label": "Veterinary",
+                        "value": "Husbandry",
+                        "background": "A skilled veterinarian can provide a good life for their family, as well as a trade education. You spent many summers helping to birth calves or calming injured \"patients\" with soothing words."
+                    }
+                },
+                "joker": {
+                    "0": {
+                        "fate": "and you will be unmade.",
+                        "label": "Bayou Born",
+                        "value": "Carouse",
+                        "background": "You weren't actually born in the Bayou, but you were still raised by drunken, reckless Gremlins. This means that you're probably no older than a teenager, though it's also possible that you were pulled into Malifaux through a small portal years before the Breach reopened."
+                    },
+                    "14": {
+                        "fate": "and you will die.",
+                        "label": "Neverborn Stolen",
+                        "value": "Counter-Spelling",
+                        "background": "It is unlikely that you knew anything was odd about your childhood spent romping with your animated teddy through the nightmares of other children, until one day your dreams simply became reality and you were unleashed into Malifaux to serve some dark purpose."
+                    }
+                },
+                "masks": {
+                    "1": {
+                        "fate": "and obliteration's touch will be gentle.",
+                        "label": "Hustler",
+                        "value": "Forgery",
+                        "background": "A short or long grift can easily make use of an entire family of trained hustlers. It is not uncommon for families of confident tricksters to ply their trade both on the road and in large cities."
+                    },
+                    "10": {
+                        "fate": "and you will murder the deserving.",
+                        "label": "Infiltrator",
+                        "value": "Deceive",
+                        "background": "A family of spies can wreak havoc on an industrial concern or a government. When espionage is suspected or discovered, a family is often the last to be suspected. Children that grow up in such households are trained to lie from a young age."
+                    },
+                    "11": {
+                        "fate": "and it shoulders aside the guardian.",
+                        "label": "Sharp",
+                        "value": "Gambling",
+                        "background": "Whether on the road or as a denizen of a single saloon, one of your parents made their living at the card tables, either as a dealer or as a player."
+                    },
+                    "12": {
+                        "fate": "and the eyes in the darkness change you.",
+                        "label": "Politician",
+                        "value": "Convince",
+                        "background": "One of your parents was a powerful political figure, such as a senator, industrialist, or even proper royalty."
+                    },
+                    "13": {
+                        "fate": "and the Empress will know the traitor.",
+                        "label": "Ten Thunders",
+                        "value": "Martial Arts",
+                        "background": "Raised as part of a secretive clan of infiltrators and criminals, your family practiced martial techniques from the Three Kingdoms, as well as a variety of other traditions that likely seem strange and foreign to Westerners."
+                    },
+                    "2": {
+                        "fate": "and so the circle will be completed.",
+                        "label": "Harlot",
+                        "value": "Bewitch",
+                        "background": "The world's oldest professions are said to be whoring and parenthood. Technically, the two aren't mutually exclusive, and some mothers or fathers turn to prostitution to keep their children fed."
+                    },
+                    "3": {
+                        "fate": "and you will risk everything to roll the dice.",
+                        "label": "Busker",
+                        "value": "Music",
+                        "background": "A close cousin to more traditional entertainers, buskers often work in groups (which included your family), entertaining people on crowded streets for tips."
+                    },
+                    "4": {
+                        "fate": "and you will splinter the white door.",
+                        "label": "Settler",
+                        "value": "Homesteading",
+                        "background": "Your family migrated out into the wilderness and forged a homestead for themselves. Direct and often stern, your parents were nevertheless independent and proud people who worked hard to instill those traits in you."
+                    },
+                    "5": {
+                        "fate": "and you will fall.",
+                        "label": "Thief",
+                        "value": "Pick Pocket",
+                        "background": "It is an uncommonly good thief who is never caught, but one of your parents managed just that. Perhaps the theft was untraceable (such as banking paperwork), or maybe they were just that good."
+                    },
+                    "6": {
+                        "fate": "and the joy of madness will claim you.",
+                        "label": "Sailor",
+                        "value": "Stitching",
+                        "background": "You traveled the seas, ferrying goods and passengers across the oceans with your parents. Whether they captained their own vessel or were a member of a larger crew, your parents provided an exciting childhood with many ports of call."
+                    },
+                    "7": {
+                        "fate": "and you will unshackle the prisoner.",
+                        "label": "Hawker",
+                        "value": "Barter",
+                        "background": "While general stores carry merchandise tailored to everyday life, a hawker provides immediate convenience and inexpensive (if shady) goods. These traveling peddlers might be perfectly fair merchants, but many work with street urchins to turn an even greater profit."
+                    },
+                    "8": {
+                        "fate": "and the willful earns his due.",
+                        "label": "Cartographer",
+                        "value": "Wilderness",
+                        "background": "One or both of your parents were mapmakers. Growing up, you spent your time helping to chart distances, lay out maps, and transform three dimensional terrain into two dimensional drawings."
+                    },
+                    "9": {
+                        "fate": "and you will deal with the devil.",
+                        "label": "Burglar",
+                        "value": "Lockpicking",
+                        "background": "In larger cities, it's not uncommon for an entire family to specialize in robbing a place blind before disappearing into the night. You may have been part of such a family, or perhaps you merely had a parent that always seemed to come home with valuable things."
+                    }
+                },
+                "rams": {
+                    "1": {
+                        "fate": "and you will hear the whispers beyond.",
+                        "label": "Convict",
+                        "value": "Shotgun",
+                        "background": "While many convicts serve their time and then find more traditional work, others spend their entire lives in the system. Each parole or release was just another opportunity for your parents to commit another crime."
+                    },
+                    "10": {
+                        "fate": "and it dreams of you.",
+                        "label": "Enforcer",
+                        "value": "Intimidate",
+                        "background": "Powerful business concerns, as well as criminal organizations, require people with brutal qualities to impose their will. The home lives of these savage people are probably best left undocumented."
+                    },
+                    "11": {
+                        "fate": "and she is part gore and part kin.",
+                        "label": "Administrator",
+                        "value": "Leadership",
+                        "background": "One or both of your parents worked for affluent and powerful people that required a firm hand to oversee operations on sites far removed from their seat of power."
+                    },
+                    "12": {
+                        "fate": "and the motion stutters and shudders.",
+                        "label": "Academic",
+                        "value": "Literacy",
+                        "background": "Your parents were part of the intellectual elite. This could include university professors, research scientists, or renowned scholars on a specific topic."
+                    },
+                    "13": {
+                        "fate": "and he will watch you drink the venom.",
+                        "label": "Ortega",
+                        "value": "Pistol",
+                        "background": "You belong to the extended family of Neverborn hunters known as the Ortegas. You've spent years learning to spot the signs of Neverborn influence and how to work closely with the rest of your family on a hunt."
+                    },
+                    "2": {
+                        "fate": "and you will forget yourself.",
+                        "label": "Cook",
+                        "value": "Culinary",
+                        "background": "A skilled cook is part of the house staff of any proper high society family. One of your parents may have worked in such a household, or perhaps they operated a small restaurant or diner. Either way, you grew up helping to prepare meals and serve them to hungry patrons."
+                    },
+                    "3": {
+                        "fate": "and you will kiss the crown.",
+                        "label": "Laborer",
+                        "value": "Athletics",
+                        "background": "Common laborers work long hours and are often joined by their immediate family. It is a hard life filled with drudgery and aching muscles, but many families find dignity in the work. Others just complain constantly about their poor lot in life."
+                    },
+                    "4": {
+                        "fate": "and you cleave the sky in vain.",
+                        "label": "Servant",
+                        "value": "Stealth",
+                        "background": "Your family served a much wealthier family as maids and field labor. Your youth was spent working, playing with other servant children, and likely being terrorized by the children of your parents' master."
+                    },
+                    "5": {
+                        "fate": "and your heart will stop on the thirteenth chime.",
+                        "label": "Shopkeep",
+                        "value": "Barter",
+                        "background": "Ownership of a shop (of any kind) kept your family fed. Your parents were likely respected in the local community, and your upbringing was likely comfortable."
+                    },
+                    "6": {
+                        "fate": "and she will turn from you, forever.",
+                        "label": "Blacksmith",
+                        "value": "Blacksmithing",
+                        "background": "Iron working is a valuable but grueling profession.Your youth was spent helping a parent on the forge, either in a city, a town, or even on a large ranch."
+                    },
+                    "7": {
+                        "fate": "and the arches will crumble.",
+                        "label": "Reporter",
+                        "value": "Scrutiny",
+                        "background": "One (or both) of your parents were journalists, investigating powerful individuals or strange events. From time to time, this might have put them (and you) in harm's way."
+                    },
+                    "8": {
+                        "fate": "and he will be paid his price.",
+                        "label": "Trapper",
+                        "value": "Track",
+                        "background": "Your parents tracked animals for their pelts and laid traps out in the wilderness. You learned a lot about how to read footprints and find game trails."
+                    },
+                    "9": {
+                        "fate": "and you take the last step.",
+                        "label": "Barrister",
+                        "value": "Bureaucracy",
+                        "background": "Laws are the cornerstone of society, and barristers are those people who argue the law. Whether in a court room or a board room, one of your parents had a deep understanding of the legal system."
+                    }
+                },
+                "tomes": {
+                    "1": {
+                        "fate": "and you cannot remove the red.",
+                        "label": "Miner",
+                        "value": "Explosives",
+                        "background": "Powerful mining operations love to employ families, as the children are able to get into tight spots that are impossible for more mature laborers to reach. If you are lucky, you might have even survived childhood with only a few scars."
+                    },
+                    "10": {
+                        "fate": "and he is to you as the hermit is to the forest.",
+                        "label": "Constable",
+                        "value": "Melee",
+                        "background": "Whether serving as a constable for a town or city, or as a lawman for a government body, constables make sure that the masses obey the rules. Knowing how dangerous the world around them is, constables often teach their children the basics of self defense."
+                    },
+                    "11": {
+                        "fate": "and you will drive the chariot of winter.",
+                        "label": "Engineer",
+                        "value": "Engineering",
+                        "background": "Society needs those who can design bridges, buildings, and clockwork devices. An engineer is often well paid for their work, and as a result, they can afford to have educated children."
+                    },
+                    "12": {
+                        "fate": "and it is the Emperor who will bring the gift.",
+                        "label": "Mad Scientist",
+                        "value": "Artefacting",
+                        "background": "To say that one of your parents was eccentric is an understatement bordering on criminal mischaracterization. You spent your childhood looking at odd machinery and listening to esoteric rants on a variety of \"educational topics.\""
+                    },
+                    "13": {
+                        "fate": "and she will kiss the hanged man's lips.",
+                        "label": "Arcanist",
+                        "value": "Sorcery",
+                        "background": "Those who are capable of performing feats of magic must often keep their skills a secret. One or both of your parents were members of the secret Arcanist organization, most likely as part of their Earthside smuggling operations."
+                    },
+                    "2": {
+                        "fate": "and it will herald the sinister revolution.",
+                        "label": "Archeologist",
+                        "value": "History",
+                        "background": "You spent your childhood being dragged from one archeological dig site to the next. You likely didn't have time to make many friends, but you certainly got a chance to see the world and learn about ancient civilizations."
+                    },
+                    "3": {
+                        "fate": "and she will mourn you all of her days.",
+                        "label": "Magewrights",
+                        "value": "Enchanting",
+                        "background": "Not every person with magical talent finds the powers of the universe at their fingertips. Instead, one of your parents had some minor magical talent and was put to work in one of the Guild's enchanting factories, where they spent ten hours a day hammering out trinkets."
+                    },
+                    "4": {
+                        "fate": "and the torch will sputter into darkness.",
+                        "label": "Accountant",
+                        "value": "Mathematics",
+                        "background": "Your family earned its living in the financial area, either working for a bank or serving as an analyst for a wealthy patron or company."
+                    },
+                    "5": {
+                        "fate": "and it will be the feast of ages.",
+                        "label": "Bookbinder",
+                        "value": "Printing",
+                        "background": "Most often found in urban centers, bookbinders typically have ink-stained fingers. Despite the large amount of work required by this profession, it provides a decent income, and most bookbinders live comfortable lives."
+                    },
+                    "6": {
+                        "fate": "and you will thrice damn him.",
+                        "label": "Manufacturing",
+                        "value": "Pneumatic",
+                        "background": "Your family was employed in a large factory. This meant long hours spent assembling the same mechanical components, day in and day out. As a child, your small hands meant that you were tasked with assembling the smallest pieces, which likely wasn't much fun at all."
+                    },
+                    "7": {
+                        "fate": "and it cackles from the locket.",
+                        "label": "Caretakers",
+                        "value": "Notice",
+                        "background": "You had a calm childhood spent tending to the gardens and homes of the affluent with one of your parents, who may have been a gardener or butler."
+                    },
+                    "8": {
+                        "fate": "and she bears the fruit of your absolution.",
+                        "label": "Alchemist",
+                        "value": "Alchemistry",
+                        "background": "While many herbal remedies can be gathered without much special preparation, your family contained at least one talented alchemist who made a comfortable living creating more complex medicines."
+                    },
+                    "9": {
+                        "fate": "and only your brothers will stand at your side.",
+                        "label": "Performer",
+                        "value": "Acrobatics",
+                        "background": "Whether on stage in a major urban center or on the road with a troupe, your family made its living singing, dancing, acting, and performing entertaining feats."
+                    }
+                }
+            },
+            "options" : {
+                "left" : 215,
+                "top" : 250
+            }
+        },
+        {
+            "label" : "Body",
+            "mode" : "ASPECT_BODY",
+            "subtitle" : "This card represents your physical form.",
+            "instructions" : "Drag and drop the values onto the four body aspects (Might, Grace, Speed, and Resilience)",
+            "results" : {
+                "crows": {
+                    "1": {
+                        "fate": "Denying the battle will win the war",
+                        "values": [
+                            -3,
+                            0,
+                            0,
+                            3
+                        ]
+                    },
+                    "10": {
+                        "fate": "Frozen hearths crawl along the stone",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "11": {
+                        "fate": "The leaves will whisper your name",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "All of the screams will lead you home",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "The mute man must cry out for the wolf",
+                        "values": [
+                            -2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "The mask donned for peace will blind you to bloodshed",
+                        "values": [
+                            -3,
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    "3": {
+                        "fate": "The song will end beyond the thrice knocked wall",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "4": {
+                        "fate": "The chime of your blunder will ring through the village",
+                        "values": [
+                            -2,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "5": {
+                        "fate": "Only in death will the pilgrim be free",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    },
+                    "6": {
+                        "fate": "The sands of waters will make you clean",
+                        "values": [
+                            -2,
+                            0,
+                            1,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "Poison will be the cure",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "8": {
+                        "fate": "The blind woman must lead the seeker",
+                        "values": [
+                            -2,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "9": {
+                        "fate": "The blood-stained cheeks will weave the grasses",
+                        "values": [
+                            -1,
+                            -1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "joker": {
+                    "0": {
+                        "fate": "You will carry the seed of a thousand-fold damnations",
+                        "values": [
+                            -2,
+                            -2,
+                            -2,
+                            4
+                        ]
+                    },
+                    "14": {
+                        "fate": "Then, in the middle of none, there was one",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            3
+                        ]
+                    }
+                },
+                "masks": {
+                    "1": {
+                        "fate": "Spirits run sour in your veins",
+                        "values": [
+                            -3,
+                            -1,
+                            1,
+                            3
+                        ]
+                    },
+                    "10": {
+                        "fate": "Burlap and steel are bound in darkness",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            2
+                        ]
+                    },
+                    "11": {
+                        "fate": "The grave did not hold her",
+                        "values": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "12": {
+                        "fate": "The halo slips around your throat like a noose",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "The sisters will show the way",
+                        "values": [
+                            -2,
+                            0,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "She drinks only blood",
+                        "values": [
+                            -2,
+                            -2,
+                            2,
+                            2
+                        ]
+                    },
+                    "3": {
+                        "fate": "Love knows not the heart but the bosom",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "4": {
+                        "fate": "Sinister and black beneath the rain",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    },
+                    "5": {
+                        "fate": "The red woman will light the path",
+                        "values": [
+                            -3,
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    "6": {
+                        "fate": "The reflection in the water shows the truth",
+                        "values": [
+                            -2,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "7": {
+                        "fate": "An abyss opens beneath your cradle",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            3
+                        ]
+                    },
+                    "8": {
+                        "fate": "They sing for laughter, tears, and tomorrow",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "9": {
+                        "fate": "The deaf man must hear the owl's warning",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    }
+                },
+                "rams": {
+                    "1": {
+                        "fate": "At last you give yourself up to the pyres",
+                        "values": [
+                            -3,
+                            -1,
+                            1,
+                            3
+                        ]
+                    },
+                    "10": {
+                        "fate": "You will watch as they fall one by one to the ground",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            2
+                        ]
+                    },
+                    "11": {
+                        "fate": "The shards you pass through leave a bloody trail",
+                        "values": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "12": {
+                        "fate": "The light fades as the final feast begins",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "The circle will bind as well as the grave",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "You turn the wheel and move the stone",
+                        "values": [
+                            -2,
+                            -2,
+                            2,
+                            2
+                        ]
+                    },
+                    "3": {
+                        "fate": "Hence, the dried lands are watered with the blood of sinners",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "4": {
+                        "fate": "The ravens will bless your children",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    },
+                    "5": {
+                        "fate": "At last, you will sacrifice her on the altars of desperation",
+                        "values": [
+                            -2,
+                            0,
+                            1,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "You will hold the myth of life in your hands",
+                        "values": [
+                            -2,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "7": {
+                        "fate": "He tightens the strings and tugs at the rivets",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            3
+                        ]
+                    },
+                    "8": {
+                        "fate": "The games you play are more deadly than she wishes",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "9": {
+                        "fate": "The other place beckons with the voice of oblivion",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    }
+                },
+                "tomes": {
+                    "1": {
+                        "fate": "The grave spirit will call to you on a spring song",
+                        "values": [
+                            -3,
+                            0,
+                            0,
+                            3
+                        ]
+                    },
+                    "10": {
+                        "fate": "The end's a miracle that you dare to dream",
+                        "values": [
+                            -1,
+                            -1,
+                            1,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "She will search for the lion of the valley",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "Lunatics fear where you will stalk",
+                        "values": [
+                            -3,
+                            0,
+                            0,
+                            3
+                        ]
+                    },
+                    "13": {
+                        "fate": "Worlds of marble turn flesh again",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    },
+                    "2": {
+                        "fate": "The end will find him in the garden",
+                        "values": [
+                            -3,
+                            -1,
+                            2,
+                            2
+                        ]
+                    },
+                    "3": {
+                        "fate": "The pale-faced innocent will drown in bile",
+                        "values": [
+                            -2,
+                            -2,
+                            2,
+                            2
+                        ]
+                    },
+                    "4": {
+                        "fate": "You will shatter the hourglass",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "5": {
+                        "fate": "You will step through the looking glass",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "6": {
+                        "fate": "The dogs in the vineyard bellow for you to hunt",
+                        "values": [
+                            -3,
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    "7": {
+                        "fate": "Only the penitent shall tread the winding path",
+                        "values": [
+                            -1,
+                            -1,
+                            1,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "The empty mind will know the lie from the judgment",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "The reflection in the water shows the truth",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    }
+                }
+            },
+            "options" : {
+                "left" : 115,
+                "top" : 250
+            }
+        },
+        {
+            "label" : "Root",
+            "subtitle" : "The root card represents the Skills you learned in your childhood.",
+            "instructions" : "Select the skill you would like and then press one of the buttons to assign that value to it.",
+            "mode" : "SKILL_ADD",
+            "results" : {
+                "crows": {
+                    "1": {
+                        "fate": "for you must dredge the waters until the just give up their dead.",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1
+                        ]
+                    },
+                    "10": {
+                        "fate": "and the reaper walks the path alongside you.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "but the witch grows weary of your follies.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "and wonders will surround your waking echoes.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "for the stars illuminate your path.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "and the wolf will howl at the door.",
+                        "values": [
+                            3,
+                            3,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "3": {
+                        "fate": "but everything rots away in the end.",
+                        "values": [
+                            3,
+                            3,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "4": {
+                        "fate": "and you will leave her hanging.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "5": {
+                        "fate": "but there is no mercy in her heart.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "and time waits for no man but you.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "but love was left behind.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "and you will read the horror in the clouds below.",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "for not all treasures glimmer in the light.",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "joker": {
+                    "0": {
+                        "fate": "and your blood will run black.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            2,
+                            2
+                        ]
+                    },
+                    "14": {
+                        "fate": "and upon wings of fear you will approach the tower.",
+                        "values": [
+                            3,
+                            3,
+                            3
+                        ]
+                    }
+                },
+                "masks": {
+                    "1": {
+                        "fate": "and you will be repaid thrice for the sins you have sold.",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1
+                        ]
+                    },
+                    "10": {
+                        "fate": "and you will leave your mark in many woes.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "and you will remember the mirror and shatter the stream.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "and the witches will wait for you at the crossroads.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "but you are safe beneath the ice.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "but there are dragons here.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "3": {
+                        "fate": "and the living shall wither from your grasp.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "4": {
+                        "fate": "for new enemies are made from old allies.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "5": {
+                        "fate": "and you will pan the gutter's glitter.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "and you will upset the delicate balance of lies.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "and your steed will take you into the jousts of war.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "for the silence brings inspiration at the door.",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "and you will find the other lands on the day she dies.",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "rams": {
+                    "1": {
+                        "fate": "but the people in the windows will greet you with terror.",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1
+                        ]
+                    },
+                    "10": {
+                        "fate": "and you will drown in the sorrow of yesterday.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "and there will be naught but ashes upon your tongue.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "for you know that a long life is a hundred curses.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "and she knows.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "for the gloom will deny that it knows you.",
+                        "values": [
+                            3,
+                            3,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "3": {
+                        "fate": "but fear the shadow cast by no man.",
+                        "values": [
+                            3,
+                            3,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "4": {
+                        "fate": "and the sullen stars align for you.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "5": {
+                        "fate": "but welcome the song of frozen winter.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "but the gathering will mock your gift.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "for the coldest court will bow to their king.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "and the moon shines upon the forgotten forest.",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "and you will come to fear the red letter.",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "tomes": {
+                    "1": {
+                        "fate": "but your misfortune will not be your own.",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1
+                        ]
+                    },
+                    "10": {
+                        "fate": "as the dead rise by your fist.",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "for you will be reborn in soot and flames.",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "but you know this has all happened before.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "and the lost will drag you into the depths.",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "as the witless man fears the child.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "3": {
+                        "fate": "for the hunter shall lay down to sleep upon the lilies.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "4": {
+                        "fate": "and the forgotten shall be recalled.",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1,
+                            1
+                        ]
+                    },
+                    "5": {
+                        "fate": "but his smile shall never fade.",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "as the jester dances where he will.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "for your secrets are not yours alone.",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "and the page turned is empty of promises.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "but heed the cripple who speaks for the coin.",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                }
+            },
+            "options" : {
+                "left" : 215,
+                "top" : 100
+            }
+        },
+        {
+            "label" : "Mind",
+            "subtitle" : "This card represents your mental abilities.",
+            "instructions" : "Drag and drop the values onto the four mind aspects (Intellect, Charm, Cunning, and Tenacity)",
+            "mode" : "ASPECT_MIND",
+            "results" : {
+                "crows": {
+                    "1": {
+                        "fate": "you will not be deceived by the ghosts of the tower",
+                        "values": [
+                            -3,
+                            0,
+                            0,
+                            3
+                        ]
+                    },
+                    "10": {
+                        "fate": "an anvil of the horde will ring with war",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "11": {
+                        "fate": "your chime of warning will be drowned in voices",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "you will run from the melancholy light",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "you will shatter the stone",
+                        "values": [
+                            -2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "the sleeper dreams of your tomorrow",
+                        "values": [
+                            -3,
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    "3": {
+                        "fate": "you will be reborn of flesh and redemption",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "4": {
+                        "fate": "you will refuse to open the tome",
+                        "values": [
+                            -2,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "5": {
+                        "fate": "you will not heed the mentor",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    },
+                    "6": {
+                        "fate": "an open door will let him into the red chapel",
+                        "values": [
+                            -2,
+                            0,
+                            1,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "your relic will rush and gleam",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "8": {
+                        "fate": "the sting of a single wasp will light the agony",
+                        "values": [
+                            -2,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "9": {
+                        "fate": "she will sicken to the blessed touch",
+                        "values": [
+                            -1,
+                            -1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "joker": {
+                    "0": {
+                        "fate": "your every breath will be as your last",
+                        "values": [
+                            -2,
+                            -2,
+                            -2,
+                            4
+                        ]
+                    },
+                    "14": {
+                        "fate": "your deeds will be undone before the thirteenth step",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            3
+                        ]
+                    }
+                },
+                "masks": {
+                    "1": {
+                        "fate": "you will lead the children through the valley",
+                        "values": [
+                            -3,
+                            -1,
+                            1,
+                            3
+                        ]
+                    },
+                    "10": {
+                        "fate": "an empty grave will fill with melody",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            2
+                        ]
+                    },
+                    "11": {
+                        "fate": "your ruination will hound your desperate exodus",
+                        "values": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "12": {
+                        "fate": "the last man will speak the lies of your glory",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "you will take an eye for the eye was taken",
+                        "values": [
+                            -2,
+                            0,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "he will shade your tired eyes",
+                        "values": [
+                            -2,
+                            -2,
+                            2,
+                            2
+                        ]
+                    },
+                    "3": {
+                        "fate": "she is unknown to your memories",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "4": {
+                        "fate": "the dusk of a new sun will light your steps into the cave",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    },
+                    "5": {
+                        "fate": "the peer of a thousand faces will weep",
+                        "values": [
+                            -3,
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    "6": {
+                        "fate": "you will be asked three times and deny each",
+                        "values": [
+                            -2,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "7": {
+                        "fate": "you will take up the sword of your father",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            3
+                        ]
+                    },
+                    "8": {
+                        "fate": "you will refuse deserved love",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "9": {
+                        "fate": "he will abandon you at the moment of tragedy",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            2
+                        ]
+                    }
+                },
+                "rams": {
+                    "1": {
+                        "fate": "you will make dust of the ram's horns",
+                        "values": [
+                            -3,
+                            -1,
+                            1,
+                            3
+                        ]
+                    },
+                    "10": {
+                        "fate": "the cauldron-spawn will crawl to your birth",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            2
+                        ]
+                    },
+                    "11": {
+                        "fate": "you will be the grape that sours the wine",
+                        "values": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "12": {
+                        "fate": "you will return with the balm for all ills",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "you will invite him in",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "you will be bold when it is needed most",
+                        "values": [
+                            -2,
+                            -2,
+                            2,
+                            2
+                        ]
+                    },
+                    "3": {
+                        "fate": "your journey will never begin",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "4": {
+                        "fate": "you will wait when you should act",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    },
+                    "5": {
+                        "fate": "the ground will rise to offer you upward",
+                        "values": [
+                            -2,
+                            0,
+                            1,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "you will be the uninvited",
+                        "values": [
+                            -2,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "7": {
+                        "fate": "you will find the answer you cannot speak",
+                        "values": [
+                            -1,
+                            -1,
+                            -1,
+                            3
+                        ]
+                    },
+                    "8": {
+                        "fate": "the melody will be lost within the gutters",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "9": {
+                        "fate": "your shame will be as beaten as the hooves",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    }
+                },
+                "tomes": {
+                    "1": {
+                        "fate": "the wondering hour will settle upon your hearth",
+                        "values": [
+                            -3,
+                            0,
+                            0,
+                            3
+                        ]
+                    },
+                    "10": {
+                        "fate": "your eyes will be open unto the abyss",
+                        "values": [
+                            -1,
+                            -1,
+                            1,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "you will fall from grace",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "he will trust your falsehoods",
+                        "values": [
+                            -3,
+                            0,
+                            0,
+                            3
+                        ]
+                    },
+                    "13": {
+                        "fate": "she strikes with daggers battered from your shield",
+                        "values": [
+                            -2,
+                            0,
+                            0,
+                            2
+                        ]
+                    },
+                    "2": {
+                        "fate": "she will sit alone amongst your misery",
+                        "values": [
+                            -3,
+                            -1,
+                            2,
+                            2
+                        ]
+                    },
+                    "3": {
+                        "fate": "you will refuse the call",
+                        "values": [
+                            -2,
+                            -2,
+                            2,
+                            2
+                        ]
+                    },
+                    "4": {
+                        "fate": "an exception will corrupt the rule",
+                        "values": [
+                            -2,
+                            -1,
+                            1,
+                            2
+                        ]
+                    },
+                    "5": {
+                        "fate": "your dance will draw the sleeping eye",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    },
+                    "6": {
+                        "fate": "the mud flows like a river into the sky",
+                        "values": [
+                            -3,
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    "7": {
+                        "fate": "you will bathe in the waters of rage",
+                        "values": [
+                            -1,
+                            -1,
+                            1,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "she must lurk within your joyless paradise",
+                        "values": [
+                            -1,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "the gloom will know you as a brother",
+                        "values": [
+                            -1,
+                            -1,
+                            0,
+                            2
+                        ]
+                    }
+                }
+            },
+            "options" : {
+                "left" : 315,
+                "top" : 250
+            }
+        },
+        {
+            "label" : "Endeavor",
+            "subtitle" : "The endeavor card represents the Skills you learned as an adult.",
+            "instructions" : "Select the skill you would like and then press one of the buttons to assign that value to it.",
+            "mode" : "SKILL_ADD",
+            "results" : {
+                "crows": {
+                    "1": {
+                        "fate": "Once the first has been last and the last has been first",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1
+                        ]
+                    },
+                    "10": {
+                        "fate": "If you allow the hands to pull you down",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "After you bleed the coal from the bones",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "As you strain to see through the high noon veil",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "When your death rattles at the door",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "When you accept your fates on the river",
+                        "values": [
+                            3,
+                            3,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "3": {
+                        "fate": "If you open the gate of wonder in the wall of lies",
+                        "values": [
+                            3,
+                            3,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "4": {
+                        "fate": "If you are unmourned by the father",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "5": {
+                        "fate": "After what is dead has died",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "Once your stains have been bound within",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "If you open the box best left closed",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "When at last you look upon your beating heart",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "As the hunter watches you swallow the maggots",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "joker": {
+                    "0": {
+                        "fate": "Once your soul has been stained by silence",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            2,
+                            2
+                        ]
+                    },
+                    "14": {
+                        "fate": "Once you witness your golden sunset",
+                        "values": [
+                            3,
+                            3,
+                            3
+                        ]
+                    }
+                },
+                "masks": {
+                    "1": {
+                        "fate": "As the crimson writhes upon the belly of the fallen",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1
+                        ]
+                    },
+                    "10": {
+                        "fate": "After you don the crimson silks",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "If you know the dimming of the lanterns",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "As the bell tolls for judgment",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "When hope drowns in but three tears",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "If the autumn bridge shakes beneath your step",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "3": {
+                        "fate": "Should your power drown in the waters of deceit",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "4": {
+                        "fate": "Once the nemesis has become the mother",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "5": {
+                        "fate": "As the watcher awaits your cry of vengeance",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "When you are a stranger to yourself",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "After the reaper has come for innocence",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "Once your vendetta is nigh upon the mountains",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "When you choose between the quill or the blade",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "rams": {
+                    "1": {
+                        "fate": "Should you choose to leave the coins behind",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1
+                        ]
+                    },
+                    "10": {
+                        "fate": "If you run when you should walk",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "As you walk backwards through the knife",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "If you choose to see no evil in the chiming of the hour",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "When you sup upon your pride and dance with cadavers",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "If you ignore the rope in the trees",
+                        "values": [
+                            3,
+                            3,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "3": {
+                        "fate": "When the seven gifts are opened",
+                        "values": [
+                            3,
+                            3,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "4": {
+                        "fate": "After the quiet of a thousand nights falls upon your ears",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "5": {
+                        "fate": "As upon your back you carry the brightest star into the shadows",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "Once you rise from the ashes",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "When your shadow is cast upon the wall",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "After the echoes of your laughter die",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "If you take oblivion's hand despite the warning",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "tomes": {
+                    "1": {
+                        "fate": "When the gears turn upon the story best forgotten",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1
+                        ]
+                    },
+                    "10": {
+                        "fate": "After you have seen the forever",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "11": {
+                        "fate": "Once you cross the bloody threshold",
+                        "values": [
+                            3,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "12": {
+                        "fate": "If justice finds you guilty of the only crime",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "13": {
+                        "fate": "As you walk the lonely road",
+                        "values": [
+                            2,
+                            2,
+                            2,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "2": {
+                        "fate": "If you find the patience to spin silver thread into gold",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "3": {
+                        "fate": "If you refuse the hero's call",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "4": {
+                        "fate": "After the branch snaps beneath your sorrow",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1,
+                            1
+                        ]
+                    },
+                    "5": {
+                        "fate": "When you wake from the dream of ancestors",
+                        "values": [
+                            3,
+                            3,
+                            2,
+                            1,
+                            1
+                        ]
+                    },
+                    "6": {
+                        "fate": "As your hands of flesh touch feet of steel",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "7": {
+                        "fate": "When you've traded away your beloved",
+                        "values": [
+                            3,
+                            2,
+                            2,
+                            1
+                        ]
+                    },
+                    "8": {
+                        "fate": "Once your strangers travel in three",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    "9": {
+                        "fate": "When you open the dead man's eyes",
+                        "values": [
+                            3,
+                            2,
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                }
+            },
+            "options" : {
+                "left" : 215,
+                "top" : 400
+            }
+        },
+        {
+            "label" : "Station Skills",
+            "subtitle" : "",
+            "instructions" : "You will gain your Station skill now. If you already have it, you can select another skill to add 1 rank to.",
+            "mode" : "SKILL_ADD",
+            "options" : {
+                "draw" : 0,
+                "from" : {
+                    "step" : "Station",
+                    "value" : "value"
+                },
+                "value" : [1]
+            }
+        },
+        {
+            "label" : "Modify",
+            "subtitle" : "",
+            "instructions" : "You may either increase an aspect by 1 (up to a max of 3) or gain 2 ranks in a skill you don't already have.",
+            "mode" : "MODIFY",
+            "options" : {
+                "draw" : 0,
+                "value" : [1, 2],
+                "aspect_value_add" : true
+            }
+        },
+        {
+            "label" : "Fate",
+            "subtitle" : "Your Destiny has been fortold...",
+            "instructions" : "Click on the button to reveal your fate.",
+            "mode" : "FATE",
+            "options" : {
+                "draw" : 0,
+                "order" : ["Endeavor", "Mind", "Root", "Body", "Station"]
+            }
+        }
+    ],
+    "characteristics" : ["Living", "Fated"],
+    "height" : 2,
+    "twist_deck" : {
+        "defining" : [1, 5, 9, 13],
+        "ascendant" : [4, 8, 12],
+        "center" : [3, 7, 11],
+        "descendant" : [2, 6, 10]
+    }
+}

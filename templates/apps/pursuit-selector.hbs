@@ -1,0 +1,45 @@
+<div>
+    {{log this}}
+    <div class="seperate_scroll left_side">
+        <ul>
+            {{#each pursuits as |pursuit id|}}
+            <li>
+                <a class="selectpursuit" data-index="{{id}}">{{pursuit}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="right_side">
+        {{#if gain_mode}}<div class="flexrow"><button class="addpursuit" data-uuid="{{selected_pursuit.uuid}}">Add Class</button></div>{{/if}}
+        <h1>{{selected_pursuit.name}}</h1>
+        {{#if is_first}}
+            <h3>Starting</h3>
+            <p>{{selected_pursuit.system.starting_with}}</p>
+        {{/if}}
+        <h3>On The Pursuit: {{selected_pursuit.on_pursuit.name}}</h3>
+        <p>{{{selected_pursuit.on_pursuit.system.description}}}</p>
+        <h3>Advancement</h3>
+        <table>
+            <tr>    
+                <th>
+                    Step
+                </th>
+                <th>
+                    Talent
+                </th>
+            </tr>
+            {{#each selected_pursuit.system.talents as |talent index|}}
+            <tr>
+                <td><center>{{index}}</center></td>
+                <td class="flexrow">
+                    <center>
+                        {{#each talent as |ind i|}}
+                            {{#unless @first}}or {{/unless}}<b>{{capitalize ind}}</b>
+                        {{/each}}
+                    </center>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</div>

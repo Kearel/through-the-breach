@@ -1,0 +1,45 @@
+<form class="skill" autocomplete="off">
+    {{log this}}
+    <section class="content">
+        <div class="flexcol">
+            <h1>Basic</h1>
+            <div class="flexrow">
+                <label>Name:</label>
+                <input name="name" type="text" value="{{name}}">
+            </div>
+            <div class="flexrow">
+                <label for="desc">Description:</label>
+                <textarea id="desc" name="system.description" rows="4" cols="50">{{description}}</textarea>
+            </div>
+            <div class="flexrow">
+                <label>Blurb:</label>
+                <input name="system.blurb" type="text" value="{{blurb}}">
+            </div>
+            <div class="flexrow">
+                <label>Type:</label>
+                <input name="system.category" type="text" value="{{category}}">
+            </div>
+            <div class="flexrow">
+                <label>Aspect:</label>
+                <select name="system.aspect" class="aspect">
+                    {{#select aspect}}
+                    {{#each aspects as |a a_name|}}
+                    <option value="{{a}}">{{capitalize a}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div class="flexrow">
+                <label>Alternate Aspect (Optional):</label>
+                <select name="system.alternate_aspect" class="aspect">
+                    {{#select alternative_aspect}}
+                    <option value="Aspect"></option>
+                    {{#each aspects as |a a_name|}}
+                    <option value="{{a}}">{{capitalize a}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+    </section>
+</form>

@@ -1,0 +1,79 @@
+.aspects {
+    border: 1px;
+}
+
+div.left_panel {
+    float:left;
+    width:50%;
+}
+
+td.aspect_header {
+    background-color: black;
+    color:white;
+    text-align:center;
+}
+
+.aspect_value {
+    text-align:center;
+    float:left;
+}
+
+#session_handler {
+    color:white;
+}
+
+#session_handler a {
+    pointer-events: auto;
+}
+
+.dropAspect {
+    border-style:dotted;
+    border-color:black;
+    border-width: medium;
+}
+
+.draggable_value { 
+    background-color: black;
+    color: white;
+}
+
+.fate_display{
+    font-weight:bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fate_display:nth-child(even)
+{
+    float:left;
+}
+.fate_display:nth-child(odd)
+{
+    float:right;
+}
+
+.actor_todo
+{
+    margin-right: 0px;
+    margin-left: 90%;
+}
+.gray_button
+{
+    color:gray;
+}
+
+.seperate_scroll
+{
+    overflow-y:scroll;
+}
+
+.left_side
+{
+    float:left;
+    width:25%;
+    height:100%;
+}
+
+.right_side
+{
+    float:right;
+    width:75%;
+}

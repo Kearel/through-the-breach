@@ -1,0 +1,9 @@
+<div class="flexrow">
+    {{#each choices as |choice index|}}
+        <a class="choice" data-index="{{index}}">
+            <h3>{{choice.title}}</h3>
+            <p>{{choice.description}}</p>
+        </a>
+        {{#unless @last}}<b>or</b>{{/unless}}
+    {{/each}}
+</div>

@@ -1,0 +1,26 @@
+<script>
+    $( function() {
+        $("#test").accordion();
+    })
+</script>
+
+<div id="test" class="flexcol">
+    {{#if black_joker}}<i class="fa fa-face-dizzy"></i><b>Black Joker Drawn!</b><i class="fa fa-face-dizzy"></i>{{/if}}
+    <details>
+        <summary>Result {{result}} {{#each present_suits as |suit|}} <i class="{{isuit suit}}"></i> {{/each}}</summary>
+        {{capitalize aspect}} {{aspect_value}}{{#if skill}} + {{capitalize skill}} {{skill_value}} {{#if skill_suit}}<i class="{{isuit skill_suit}}"></i>{{/if}}{{/if}} + Card {{chosen.value}} <i class="{{isuit chosen.suit}}"></i>{{#if bonus}} + bonus {{bonus}}{{/if}}
+    </details>
+    <div class="flexrow">
+        <div>
+            TN: {{tn}} {{#each ts as |suit|}} <i class="{{isuit suit}}"></i> {{/each}}
+        </div>
+        <div>
+            {{#if success}}Success{{else}}Failure{{/if}}
+        </div>
+    </div>
+    {{#if margin}}
+        <div>
+            {{#if success}}MoS{{else}}MoF{{/if}} {{margin}}
+        </div>
+    {{/if}}
+</div>

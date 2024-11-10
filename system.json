@@ -1,0 +1,45 @@
+{
+	"id" : "through-the-breach",
+	"title" : "Through The Breach",
+	"description" : "An unofficial implementation of the Malifaux RPG",
+	"version" : "0.0.1",
+	"compatibility" : {
+		"minimum" : 12,
+		"verified" : 12
+	},
+	"authors" : [{
+		"name" : "TheWelp",
+		"url" : "",
+		"email": "",
+		"discord" : ""
+	}],
+	"styles" : [
+		"styles/main-styles.css"
+	],
+	"esmodules" : ["throughthebreach.mjs"],
+	"packs" : [],
+	"documentTypes" : {
+		"Actor" : {
+			"fated" : {},
+			"fatemaster" : {}
+		},
+		"Item" : {
+			"pursuit" : {},
+			"talent" : {},
+			"skill": {},
+			"trigger" : {},
+			"equipment" : {},
+			"magia" : {},
+			"immuto" : {}
+		},
+		"Card" : {
+			"fate" : {}
+		}
+	},
+	"socket" : false,
+	"initiative" : "1d20",
+	"grid" : {
+		"distance" : 1,
+		"units" : "yd"
+	}
+}

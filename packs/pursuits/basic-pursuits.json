@@ -1,0 +1,25 @@
+{
+	"name": "Academic",
+	"type": "pursuit",
+	"_id": "VrXqWrjdudrypx2J",
+	"img": "icons/svg/item-bag.svg",
+	"system": {},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"7iAb5MNseinnNQNy": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"coreVersion": "12.328",
+		"systemId": "through-the-breach",
+		"systemVersion": "0.0.1",
+		"createdTime": 1721588042975,
+		"modifiedTime": 1721588042975,
+		"lastModifiedBy": "TTB Basic"
+	}
+}

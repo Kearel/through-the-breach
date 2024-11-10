@@ -1,0 +1,75 @@
+<form class="magia" autocomplete="off">
+    <div class="flexcol">
+        <div class="flexrow">
+            <label>Name:</label>
+            <input name="name" type="text" value="{{name}}">
+        </div>
+        <div class="flexrow">
+            <label>Blurb:</label>
+            <input name="system.blurb" type="text" value="{{blurb}}">
+        </div>
+        <div class="flexrow">
+            <label>Description:</label>
+            <input name="system.description" type="text" value="{{description}}">
+        </div>
+        <div class="flexrow">
+            <div>
+                <label>School:</label>
+                <select name="system.school">
+                    {{#select school}}
+                    {{#each schools as |s i|}}
+                    <option value="{{s}}">{{capitalize s}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div>
+                <label>Aspect:</label>
+                <select name="system.aspect">
+                    {{#select aspect}}
+                    {{#each aspects as |a i|}}
+                    <option value="{{a}}">{{capitalize a}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+        <div class="flexrow">
+            <div>
+                AP: <input name="system.ap_cost" type="number" value="{{ap_cost}}">
+            </div>
+            <div>
+                <label>Resist:</label>
+                <select name="system.resist_aspect">
+                    {{#select resist_aspect}}
+                    <option value="none">None</option>
+                    <option value="willpower">Willpower</option>
+                    <option value="defense">Defense</option>
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+        <div class="flexrow">
+            <div>
+                TN: <input name="system.target_number.value" type="number" value="{{target_number.value}}">
+            </div>
+            <div>
+                <select name="system.target_number.suit">
+                    {{#select target_number.suit}}
+                    {{#each suits as |s i|}}
+                    <option value="{{s}}">{{capitalize s}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+        <div class="flexrow">
+            <div>
+                Melee: <input name="system.melee" type="checkbox" {{#if melee}}checked{{/if}}>
+            </div>
+            <div>
+                Range: <input name="system.range" type="number" value="{{range}}">
+            </div>
+        </div>
+    </div>
+</form>

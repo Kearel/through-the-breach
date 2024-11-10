@@ -1,0 +1,50 @@
+<style>
+    .card_container {
+        height: 180px;
+    }
+    #selected img{
+        border: 5px solid black;
+    }
+</style>
+
+<div class="flexcol">
+    <center><h3>Select a Card</h3></center>
+    <div>
+        <div class="card_container" style="border: 2px solid red">
+            <center><h4>Drawn</h4></center>
+            <div align="center" class="flexrow">
+                {{#each choices as |choice index|}}
+                <div>
+                    <a {{#if @first}}id="selected"{{/if}} class="drawn card" data-card="{{choice.uuid}}" data-hand="false" data-value="{{choice.value}}" data-suit="{{choice.suit}}"><img src="{{choice.faces.0.img}}" width="100"></a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="card_container" style="border: 2px solid blue">
+            <center><h4>Hand</h4></center>
+            <div class="flexrow">
+                {{#each hand as |choice index|}}
+                <div>
+                    <a class="hand card" data-card="{{choice.uuid}}" data-hand="true" data-value="{{choice.value}}" data-suit="{{choice.suit}}"><img src="{{choice.faces.0.img}}" width="100"></a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div>
+        Result: <label id="result">0</label>
+    </div>
+    <div>
+        TN: {{tn}} {{#each ts as |suit|}}{{isuit suit}}{{/each}}
+    </div>
+    <div>
+        <center>
+            Trigger: <select id="trigger">
+                <option value="None" selected>None</option>
+                {{#each triggers as |trigger|}}
+                <option value="{{trigger.uuid}}">{{trigger.name}}</option>
+                {{/each}}
+            </select>
+        </center>
+    </div>
+</div>
