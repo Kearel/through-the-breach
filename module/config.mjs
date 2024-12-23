@@ -63,6 +63,7 @@ export const equipment_types = [
     "gear",
     "weapon",
     "armor",
+    "grimoire",
     "modification"
 ]
 
@@ -109,4 +110,11 @@ export function tn_to_difficulty(tn)
         return "Incredibly Difficult";
     }
     return "Highly Improbable";
+}
+
+export const twist_to_numbers = {
+    "ascendant" : [4,8,12],
+    "center" :  [3,7,11],
+    "defining" :  [1,5,9,13],
+    "descendant" : [2,6,10]
 }

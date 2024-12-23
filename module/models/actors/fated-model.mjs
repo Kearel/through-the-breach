@@ -1,4 +1,5 @@
 import { AutoDerivedActorData } from "./actor-models.mjs";
+import { twist_to_numbers } from "../../config.mjs";
 
 const { BooleanField, NumberField, SchemaField, StringField, ArrayField } = foundry.data.fields;
 
@@ -7,16 +8,43 @@ export class FatedActorData extends AutoDerivedActorData {
         return foundry.utils.mergeObject(super.defineSchema(), {
             level_up: new BooleanField({required: true, initial:false}),
             xp: new NumberField({required: true, initial: 0, integer: true}),
-            current_pursuit: new StringField({required: true, initial:"", blank:true}), //uuid maybe? 
+            current_pursuit: new StringField({required: true, initial:"", blank:true}), //uuid 
             station: new StringField({required: true, initial:"Station"}),
             experience_points: new NumberField({required: true, initial: 0, min: 0, integer:true}),
-            fate_cards: new ArrayField(
-                new SchemaField({
-                    suit: new StringField({required: true, initial: "Masks"}),
-                    value: new NumberField({required: true, initial: 0}),
-                    fate: new StringField({required: true, initial: "Nothing happens everyone is happy :)"}),
-                    label: new StringField({required: true, initial: "Boring"})
-                })
+            fate_cards: new SchemaField(
+                {
+                    1: new SchemaField({
+                        suit: new StringField({required: true, initial: "Masks"}),
+                        value: new NumberField({required: true, initial: 0}),
+                        fate: new StringField({required: true, initial: ""}),
+                        label: new StringField({required: true, initial: "Label"})
+                    }),
+                    2: new SchemaField({
+                        suit: new StringField({required: true, initial: "Masks"}),
+                        value: new NumberField({required: true, initial: 0}),
+                        fate: new StringField({required: true, initial: ""}),
+                        label: new StringField({required: true, initial: "Label"})
+                    }),
+                    3: new SchemaField({
+                        suit: new StringField({required: true, initial: "Masks"}),
+                        value: new NumberField({required: true, initial: 0}),
+                        fate: new StringField({required: true, initial: ""}),
+                        label: new StringField({required: true, initial: "Label"})
+                    }),
+                    4: new SchemaField({
+                        suit: new StringField({required: true, initial: "Masks"}),
+                        value: new NumberField({required: true, initial: 0}),
+                        fate: new StringField({required: true, initial: ""}),
+                        label: new StringField({required: true, initial: "Label"})
+                    }),
+                    5: new SchemaField({
+                        suit: new StringField({required: true, initial: "Masks"}),
+                        value: new NumberField({required: true, initial: 0}),
+                        fate: new StringField({required: true, initial: ""}),
+                        label: new StringField({required: true, initial: "Label"})
+                    })
+                }
+                
             ),
             attuned: new ArrayField(
                 new StringField({initial: "GrimoireID"})
@@ -25,12 +53,12 @@ export class FatedActorData extends AutoDerivedActorData {
             cheat_deck: new StringField({required: true, initial:"None"}),
             hand: new StringField({required: true, initial: "None"}),
             discard_pile : new StringField({required: true, initial: "None"}),
-            twist_deck: new ArrayField( //We keep this in case the decks get deleted/messed with somehow
-                new SchemaField({
-                    suit: new StringField({required: true, initial: "Masks"}),
-                    value: new NumberField({required: true, initial: 0})
-                })
-            )
+            twist_deck: new SchemaField({
+                ascendant: new StringField({required:true, initial:"rams"}),
+                descendant: new StringField({required:true, initial:"masks"}),
+                defining: new StringField({required:true, initial:"crows"}),
+                center: new StringField({required:true, initial:"tomes"})
+            })
         })
     }
 
@@ -38,15 +66,20 @@ export class FatedActorData extends AutoDerivedActorData {
     {
         super.filterItems();
         this.pursuits = foundry.utils.deepClone(this.parent.itemTypes["pursuit"]);
+        var talents = foundry.utils.deepClone(this.talents);
+        this.pursuits.forEach(pursuit => {
+            var pursuit_talents = talents.filter((talent) => talent.system.origin == pursuit.uuid);
+            console.log(pursuit_talents);
+            talents = talents.filter((talent) => !pursuit_talents.includes(talent));
+            pursuit.talents = pursuit_talents;
+        });
+        this.general_talents = talents;
+        this.magia = foundry.utils.deepClone(this.parent.itemTypes["magia"]);
+        this.immuto = foundry.utils.deepClone(this.parent.itemTypes["immuto"]);
     }
 
     async generate_decks()
     {
-        if(this.parent.system.twist_deck.length == 0)
-        {
-            //Probably call an error here.
-            return;
-        }
         //Generate whichever we don't have
         var gen_cheat = true;
         if(this.parent.system.cheat_deck != "None")
@@ -82,10 +115,24 @@ export class FatedActorData extends AutoDerivedActorData {
 
         if(gen_cheat)
         {
+            var simple_twists = [];
+            var i = 0;
+            for(i = 0; i < Object.keys(twist_to_numbers).length; i++)
+            {
+                var key = Object.keys(twist_to_numbers)[i];
+                var suit = this.parent.system.twist_deck[key];
+                twist_to_numbers[key].forEach((value) => {
+                    simple_twists.push({
+                        suit : suit,
+                        value : value
+                    });
+                });
+            }
+            console.log(simple_twists);
             var preset = CONFIG.Cards.presets[TTB.actor_hand_preset];
             const presetData = await fetch(preset.src).then(r => r.json());
             presetData.name = "Cheat Deck - " + this.parent.name;
-            presetData.cards = presetData.cards.filter((card) => this.parent.system.twist_deck.some((c) => c.suit == card.suit && c.value == card.value)); //Filter out the cards that aren't in our list
+            presetData.cards = presetData.cards.filter((card) => simple_twists.some((c) => c.suit == card.suit && c.value == card.value)); //Filter out the cards that aren't in our list
             var deck = await Cards.implementation.create(presetData);
             system_updates["cheat_deck"] = deck.uuid;
         }
@@ -115,7 +162,7 @@ export class FatedActorData extends AutoDerivedActorData {
         {
             await this.parent.update({system: system_updates});
             ChatMessage.create({
-                content: "Generated Fate Deck/Hand/Discard for " + fated.name,
+                content: "Generated Fate Deck/Hand/Discard for " + this.parent.name,
                 user: game.userId
             });
         }
@@ -139,5 +186,40 @@ export class FatedActorData extends AutoDerivedActorData {
     async select_pursuit_as_current(pursuit_uuid)
     {
         await this.parent.update({system: {current_pursuit: pursuit_uuid}});
+    }
+
+    prepareDerivedData()
+    {
+        super.prepareDerivedData();
+        if(this.parent.system.current_pursuit != "")
+        {
+            this.current_pursuit = fromUUidSync(this.parent.system.current_pursuit);
+        }
+        var num_light = 0;
+        var num_heavy = 0;
+        this.equipment.forEach(item => {
+            if(item.system.equipped)
+            {
+                if(item.system.special.includes("Light"))
+                {
+                    num_light += 1;
+                }
+                if(item.system.special.includes("Heavy"))
+                {
+                    num_heavy += 1;
+                }
+            }
+        });
+        if(num_heavy > 0 && num_heavy + num_light >= 3)
+        {
+            this.derived.armor = 2;
+        }
+        else if(num_light > 0 || num_heavy > 0)
+        {
+            this.derived.armor = 1;
+        } else {
+            this.derived.armor = 0;
+        }
+        this.derived.defense -= this.derived.armor;
     }
 }

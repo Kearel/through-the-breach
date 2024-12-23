@@ -27,12 +27,13 @@ export class PursuitData extends TalentData {
     {
         super.prepareDerivedData();
         this.talents = [];
-        
+        this.talent_pool = [];
         this.talents_by_rank.forEach((pool) => {
             var inner = {};
             if(pool != "")
             {
                 pool.forEach((uuid) => {
+                    this.talent_pool.push(uuid);
                     if(uuid == TTB.general_talent_id)
                     {
                         inner[uuid] = "General Talent";

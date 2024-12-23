@@ -13,6 +13,10 @@ td.aspect_header {
     text-align:center;
 }
 
+input.aspect_header{
+    color:white;
+}
+
 .aspect_value {
     text-align:center;
     float:left;

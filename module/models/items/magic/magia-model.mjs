@@ -11,11 +11,12 @@ export class MagiaData extends foundry.abstract.TypeDataModel {
                 value: new NumberField({initial: 0, integer: true, required: true}),
                 suit: new StringField({initial: "rams", required:true, blank:false})
             }),
-            resist_aspect: new StringField({initial: "none", required:false}),
+            resist_aspect: new StringField({initial: "might", required:false}),
             range: new NumberField({initial: 1, integer: true, required: true}),
             melee: new BooleanField({initial: false, required: true}),
             blurb: new StringField({initial: "Blurb", required:true}),
-            description: new StringField({initial:"Effect Desc", required:true})
+            description: new StringField({initial:"Effect Desc", required:true}),
+            origin: new StringField({initial:"", required:false})
         }
     }
 }
