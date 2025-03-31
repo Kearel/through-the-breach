@@ -74,7 +74,9 @@ export default class FateDuel
         }
         var hand = fromUuidSync(duelist.system.hand);
         var actual_skill = duelist.system.getSkill(skill);
-        var triggers = duelist.system.getTriggersForSkill(skill);
+        var triggers = [];
+        if(actual_skill)
+            triggers = duelist.system.getTriggersForSkill(skill);
         var context = {
             black_joker: !!black_joker,
             actor: duelist,

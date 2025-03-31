@@ -14,7 +14,16 @@ export class BasicActorData extends foundry.abstract.TypeDataModel {
                 intellect : new NumberField({ required: true, integer: true, initial: 0}),
                 charm : new NumberField({ required: true, integer: true, initial: 0}),
                 cunning : new NumberField({ required: true, integer: true, initial: 0}),
-                tenacity : new NumberField({ required: true, integer: true, initial: 0})
+                tenacity : new NumberField({ required: true, integer: true, initial: 0}),
+                defense : new NumberField({ required: true, integer: true, initial: 0}),
+                armor : new NumberField({ required: true, integer: true, initial: 0}),
+                willpower : new NumberField({ required: true, integer: true, initial: 0}),
+                wounds : new NumberField({ required: true, integer: true, initial: 0}),
+                walk : new NumberField({ required: true, integer: true, initial: 0}),
+                charge : new NumberField({ required: true, integer: true, initial: 0}),
+                initiative : new NumberField({ required: true, integer: true, initial: 0}),
+                height : new NumberField({ required: true, integer: true, initial: 0})
+
             }),
             scrip: new NumberField({required: true, initial: 0}),
             characteristics : new StringField({required: true, initial: "Living"}),
@@ -40,19 +49,18 @@ export class BasicActorData extends foundry.abstract.TypeDataModel {
 
     getTriggersForSkill(skill)
     {
-        return this.getSkill(skill).triggers;
+        return this.triggers.filter(trigger => {trigger.system.skill == skill});
     }
 
     filterItems()
     {
         this.skills = foundry.utils.deepClone(this.parent.itemTypes["skill"]);
-        //Now we do the triggers
-        var triggers = foundry.utils.deepClone(this.parent.itemTypes["trigger"]);
-        this.skills.forEach(skill => {
+        this.triggers = foundry.utils.deepClone(this.parent.itemTypes["trigger"]);
+        /*this.skills.forEach(skill => {
             var skill_triggers = triggers.filter((trigger) => trigger.system.skill == skill.uuid);
             triggers = triggers.filter((trigger) => !skill_triggers.includes(trigger));
             skill.triggers = skill_triggers;
-        });
+        });*/
         this.talents = foundry.utils.deepClone(this.parent.itemTypes["talent"]);
         this.equipment = foundry.utils.deepClone(this.parent.itemTypes["equipment"]);
     }

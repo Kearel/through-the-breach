@@ -21,6 +21,7 @@ export class EquipmentData extends foundry.abstract.TypeDataModel {
             }),
             attacks: new ArrayField(
                 new SchemaField({
+                    name: new StringField({initial:"Attack", required:true}),
                     melee: new BooleanField({initial:true, required:true}),
                     range: new NumberField({initial:1, integer:true}),
                     weak_damage: new NumberField({initial:1, integer:true}),
@@ -69,6 +70,10 @@ export class EquipmentData extends foundry.abstract.TypeDataModel {
                 this.derived_specials.push({tag: item.system.special[tag], builtin: false});
             }
             this.modification_info.push({name: item.name, uuid: this.modifications[mod], icon: item.img});
+        }
+        for(var attack in this.derived_attacks)
+        {
+            this.derived_attacks[attack].damage = `${this.derived_attacks[attack].weak_damage}/${this.derived_attacks[attack].moderate_damage}/${this.derived_attacks[attack].severe_damage}`;
         }
     }
 }

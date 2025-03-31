@@ -10,7 +10,7 @@ export class FatedSheet extends SheetWithItemsMixin(ActorSheet) {
             width: 800,
             height: 1000,
             resizable: true,
-            tabs: [{ navSelector: ".tabs", contentSelector: ".content", intital: "stat"}]
+            tabs: [{ navSelector: ".tabs", contentSelector: ".content", intital: "aspects"}]
         });
     }
 
@@ -24,14 +24,22 @@ export class FatedSheet extends SheetWithItemsMixin(ActorSheet) {
         html.find(".rankmod").on("contextmenu", this._modify_rank.bind(this));
         html.find(".createduel").on("click", this._create_duel_skilled.bind(this));
         html.find(".setting_up").on("click", this._start_character_creator.bind(this));
-        html.find(".addtrigger").on("click", this._add_trigger.bind(this));
         html.find(".addpursuittalent").on("click", this._add_pursuit_talent.bind(this));
+        html.find(".selectpursuit").on("click", this._select_pursuit.bind(this));
         html.find(".generate_decks").on("click", this._generate_decks.bind(this));
+        html.find(".rollattackskill").on("click", this._roll_attack_skill.bind(this));
+        html.find(".rollduel").on("click", this._create_duel.bind(this));
     }
 
     _generate_decks(_event)
     {
         this.actor.system.generate_decks();
+    }
+
+    _roll_attack_skill(event)
+    {
+        var element = event.currentTarget;
+        FateDuel.createDuel(this.actor, element.dataset.skill);
     }
 
     _start_character_creator(_event)
@@ -81,15 +89,21 @@ export class FatedSheet extends SheetWithItemsMixin(ActorSheet) {
             case "magia":
                 await this.actor.createEmbeddedDocuments("Item", [{name: "Magia", type:"magia"}]);
                 break;
-
+            case "trigger":
+                await this.actor.createEmbeddedDocuments("Item", [{name: "Trigger", type:"trigger"}]);
+                break;
         }
     }
 
-    async _add_trigger(event)
+    _select_pursuit(event)
     {
         const a = event.currentTarget;
         let el = a.closest(".item");
-        await this.actor.createEmbeddedDocuments("Item", [{name: "Trigger", type:"trigger", system:{ skill: el.dataset.itemid}}]);
+        this.actor.update({
+            system : {
+                current_pursuit : el.dataset.itemid
+            }
+        });
     }
 
     async _add_pursuit_talent(event)
@@ -105,6 +119,11 @@ export class FatedSheet extends SheetWithItemsMixin(ActorSheet) {
         var element = event.currentTarget.closest(".item");
         var skill = fromUuidSync(element.dataset.itemid);
         FateDuel.createDuel(this.actor, skill.name);
+    }
+
+    _create_duel(event)
+    {
+        FateDuel.createDuel(this.actor, "");
     }
 
     async _generate_decks()
@@ -130,12 +149,13 @@ export class FatedSheet extends SheetWithItemsMixin(ActorSheet) {
         context.aspects = foundry.utils.deepClone(this.actor.system.aspects);
         context.derived = foundry.utils.deepClone(this.actor.system.derived);
         context.skills = foundry.utils.deepClone(this.actor.system.skills);
-        context.general_talents = foundry.utils.deepClone(this.actor.system.general_talents);
+        context.triggers = foundry.utils.deepClone(this.actor.system.triggers);
         context.equipment = foundry.utils.deepClone(this.actor.system.equipment);
         context.magia = foundry.utils.deepClone(this.actor.system.magia);
         context.immuto = foundry.utils.deepClone(this.actor.system.immuto);
         context.triggers = foundry.utils.deepClone(this.actor.system.triggers);
         context.pursuits = foundry.utils.deepClone(this.actor.system.pursuits);
+        context.talents = foundry.utils.deepClone(this.actor.system.talents);
         context.active_player = this.actor.system.active_player;
         context.has_been_setup = this.actor.system.skills.length > 0;
         context.has_chosen_first_pursuit = this.actor.system.pursuits.length > 0;
@@ -145,6 +165,7 @@ export class FatedSheet extends SheetWithItemsMixin(ActorSheet) {
         context.item_types = foundry.utils.deepClone(equipment_types);
         context.twist_deck = foundry.utils.deepClone(this.actor.system.twist_deck);
         context.fate_cards = foundry.utils.deepClone(this.actor.system.fate_cards);
+        context.current_pursuit = this.actor.system.current_pursuit;
         if(this.actor.system.cheat_deck != "None")
         {
             var deck = fromUuidSync(this.actor.system.cheat_deck);
@@ -152,6 +173,15 @@ export class FatedSheet extends SheetWithItemsMixin(ActorSheet) {
         } else {
             context.has_decks = false;
         }
+
+        var attacks = [];
+        context.equipment.forEach(element => {
+            if(element.system.derived_attacks.length > 0)
+            {
+                attacks = attacks.concat(element.system.derived_attacks);
+            }
+        });
+        context.attacks = attacks;
         //context.setting_up = !context.has_been_setup || !context.has_chosen_first_pursuit || !context.has_created_twist_deck || !context.has_created_twist_deck || !context.has_decks;
         return context;
     }

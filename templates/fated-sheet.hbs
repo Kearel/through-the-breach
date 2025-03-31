@@ -4,151 +4,57 @@
         {{#if setting_up}}<a class="setting_up">Setup <i class="fa fa-plus"></i></a>{{/if}}
         {{#if level_up}}<a class="level_up">Level Up <i class="fa fa-plus"></i></a>{{/if}}
     </div>
-
+    <div class="flexcol">
+        <a align="right" class="rollduel"><i class="fa fa-dice fa-2xl"></i></a>
+        <br>
+        <div class="flexrow">
+            <img class="profile" src="{{actor.img}}" data-tooltip="{{actor.name}}" data-edit="img"/>
+            <div class="flexcol">
+                <div class="black_header">Name</div>
+                <input name="name" type="text" value="{{actor.name}}">
+                <div class="black_header flexrow">
+                    <label>Pursuit</label>
+                    <label>Station</label>
+                </div>
+                <div class="flexrow">
+                    <center>
+                        {{#if current_pursuit}}
+                            <label>{{current_pursuit.name}}</label>
+                        {{else}}
+                            <label>None</label>
+                        {{/if}}
+                    </center>
+                    <input name="system.station" type="text" value="{{actor.system.station}}">
+                </div>
+            </div>
+            <div class="flexcol">
+                <div class="black_header">Characteristics</div>
+                <input name="system.characteristics" type="text" value="{{actor.system.characteristics}}">
+                <div class="black_header flexrow">
+                    <label>EXP</label>
+                    <label>Scrip</label>
+                </div>
+                <div class="flexrow">
+                    <input name="system.xp" type="number" value="{{actor.system.xp}}">
+                    <input name="system.scrip" type="number" value="{{actor.system.scrip}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
     <nav class="tabs" data-group="primary">
-        <a class="item" data-tab="fate">Fate</a>
-        <a class="item" data-tab="aspects">Aspects & Skills</a>
-        <a class="item" data-tab="pursuits">Pursuits & Talents</a>
-        <a class="item" data-tab="equipment">Equipment</a>
-        <a class="item" data-tab="combat">Combat</a>
+        <a class="item" data-tab="aspects" data-group="primary">Aspects & Skills</a>
+        <a class="item" data-tab="pursuits" data-group="primary">Pursuits & Talents</a>
+        <a class="item" data-tab="combat" data-group="primary">Combat</a>
+        <a class="item" data-tab="equipment" data-group="primary">Equipment</a>
+        <a class="item" data-tab="magic" data-group="primary">Magic</a>
+        <a class="item" data-tab="destiny" data-group="primary">Destiny & Fate</a>
     </nav>
     <section class="content">
-        <div class="tab flexcol" data-group="primary" data-tab="fate">
-            <h2>Twist Deck</h2>
-            <a class="generate_decks flex0" data-tooltip="Generate Decks" data-tooltip-direction="RIGHT"><i class="fa fa-star"></i></a>
-            <div class="flexrow">
-                <div>
-                    <h3>Defining</h3>
-                    <p>1,5,9,13</p>
-                    <select name="system.twist_deck.defining">
-                        {{#select twist_deck.defining}}
-                        {{#each suits_list as |choice index|}}
-                            <option value="{{choice}}">{{capitalize choice}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
-                <div class="suit_target">
-                    <h3>Ascendant</h3>
-                    <p>4,8,12</p>
-                    <select name="system.twist_deck.ascendant">
-                        {{#select twist_deck.ascendant}}
-                        {{#each suits_list as |choice index|}}
-                            <option value="{{choice}}">{{capitalize choice}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
-            </div>
-            <div class="flexrow">
-                <div class="suit_target">
-                    <h3>Center</h3>
-                    <p>3,7,11</p>
-                    <select name="system.twist_deck.center">
-                        {{#select twist_deck.center}}
-                        {{#each suits_list as |choice index|}}
-                            <option value="{{choice}}">{{capitalize choice}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
-                <div class="suit_target">
-                    <h3>Descendant</h3>
-                    <p>2,6,10</p>
-                    <select name="system.twist_deck.descendant">
-                        {{#select twist_deck.descendant}}
-                        {{#each suits_list as |choice index|}}
-                            <option value="{{choice}}">{{capitalize choice}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
-            </div>
-            <br>
-            <h2>Destiny</h2>
-            <p>Black Jokers have a value of 0. Red Jokers have a value of 14.</p>
-            <table>
-                {{#each fate_cards as |fate i|}}
-                    <tr>
-                        <td class="flexrow aspect_header"><input name="system.fate_cards.{{i}}.label" value="{{fate.label}}" type="text"> <label class="flex0">Destiny</label></td>
-                        <td class="aspect_header">Card</td>
-                    </tr>
-                    <tr>
-                        <td style="width:75%"><input name="system.fate_cards.{{i}}.fate" value="{{fate.fate}}" type="text"></td>
-                        <td style="text-align:center" class="flexrow">
-                            <input class="flex0" name="system.fate_cards.{{i}}.value" value="{{fate.value}}" width="5" type="number">
-                            <select class="flex0" name="system.fate_cards.{{i}}.suit">
-                                {{#select fate.suit}}
-                                    <option value="joker">Joker</option>
-                                    {{#each ../suits_list as |choice index|}}
-                                        <option value="{{choice}}">{{capitalize choice}}</option>
-                                    {{/each}}
-                                {{/select}}
-                            </select>
-                        </td>
-                    </tr>
-                {{/each}}
-            </table>
-        </div>
-        <div class="tab flexcol" data-group="primary" data-tab="pursuits">
-            {{#if current_pursuit}}
-                <div><h3>{{current_pursuit.name}}</h3></div>
-                <h3>{{current_pursuit.description}}</h3>
-            {{/if}}
-            <h1>Pursuits</h1>
-            <table class="item-list" data-itemtype="pursuit">
-                <tr>
-                    <th>Rank</th>
-                    <th>Pursuit</th>
-                    <th><a class="additem"><i class="fa fa-plus"></i></a></th>
-                </tr>
-                {{#each pursuits as |pursuit|}}
-                    <tr class="item" data-itemid="{{pursuit.uuid}}">
-                        <td><input class="item_data" type="number" data-var="system.rank" value="{{pursuit.system.rank}}"></td>
-                        <td><input class="item_data" type="text" data-var="name" value="{{pursuit.name}}"></td>
-                        <td>
-                            <a class="addpursuittalent"><i class="fa fa-plus"></i></a>
-                            <a class="examineitem"><i class="fa fa-circle-info"></i></a>
-                            <a class="removeitem"><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
-                    {{#if pursuit.talents.length}}
-                        {{#each pursuit.talents as |talent|}}
-                            <tr class="item" data-itemid="{{talent.uuid}}">
-                                <td><label><i class="fa fa-caret-right"></i><input class="item_data" type="text" data-var="name" value="{{talent.name}}"></label></td>
-                                <td><input class="item_data" type="text" data-var="system.description" value="{{talent.system.description}}"></td>
-                                <td>
-                                    <a class="examineitem"><i class="fa fa-circle-info"></i></a>
-                                    <a class="removeitem"><i class="fa fa-trash"></i></a>
-                                </td>
-                            </tr>
-                        {{/each}}
-                    {{/if}}
-                {{/each}}
-            </table>
-            <h3>General Talents</h3>
-            <table class="item-list" data-itemtype="talent">
-                <tr>
-                    <th>Talent</th>
-                    <th>Description</th>
-                    <th><a class="additem"><i class="fa fa-plus"></i></a></th>
-                </tr>
-                {{#each general_talents as |talent|}}
-                    <tr class="item" data-itemid="{{talent.uuid}}">
-                        <td><input class="item_data" type="text" data-var="name" value="{{talent.name}}"></td>
-                        <td><input class="item_data" type="text" data-var="system.description" value="{{talent.system.description}}"></td>
-                        <td>
-                            <a class="examineitem"><i class="fa fa-circle-info"></i></a>
-                            <a class="removeitem"><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
-                {{/each}}
-            </table>
-        </div>
         <div class="tab flexcol" data-group="primary" data-tab="aspects">
             <div class="flexrow">
                 <div class="flexcol">
-                    <center><h1>Aspects</h1></center>
+                    <h3>Aspects</h3>
                     <table class="aspects">
                         <tr class="aspects">
                             <th>Physical</th>
@@ -213,36 +119,34 @@
                             </td>
                         </tr>
                     </table>
-                </div>
-                <div class="flexcol">
-                    <center><h1>Derived Aspects</h1></center>
+                    <h3>Derived Aspects</h3>
                     <table class="aspects">
                         <tr>
                             <td class="aspects aspect_header">
                                 <label>Defense</label>
                             </td>
                             <td class="aspect">
-                                <input class="aspect_value" id="defense" disabled="true" type="text" value="{{derived.defense}}" placeholder="0" data-dtype="Number">
+                                <input class="aspect_value" id="defense" name="system.aspects.defense" type="text" value="{{aspects.defense}}" placeholder="0" data-dtype="Number">
                             </td>
                             <td class="aspects aspect_header">
                                 <label>Walk</label>
                             </td>
                             <td class="aspect">
-                                <input class="aspect_value" id="walk" disabled="true" type="text" value="{{derived.walk}}" placeholder="0" data-dtype="Number">
+                                <input class="aspect_value" id="walk" name="system.aspects.walk" type="text" value="{{aspects.walk}}" placeholder="0" data-dtype="Number">
                             </td>
                         </tr>
-                        <tr >
+                        <tr>
                             <td class="aspects aspect_header">
                                 <label>Armor</label>
                             </td>
                             <td class="aspect">
-                                <input class="aspect_value" id="armor" disabled="true" type="text" value="{{derived.armor}}" placeholder="0" data-dtype="Number">
+                                <input class="aspect_value" id="armor" name="system.aspects.armor" type="text" value="{{aspects.armor}}" placeholder="0" data-dtype="Number">
                             </td>
                             <td class="aspects aspect_header">
                                 <label>Charge</label>
                             </td>
                             <td class="aspect">
-                                <input class="aspect_value" id="charge" disabled="true" type="text" value="{{derived.charge}}" placeholder="0" data-dtype="Number">
+                                <input class="aspect_value" id="charge" name="system.aspects.charge" type="text" value="{{aspects.charge}}" placeholder="0" data-dtype="Number">
                             </td>
                         </tr>
                         <tr>
@@ -250,13 +154,13 @@
                                 <label>Willpower</label>
                             </td>
                             <td class="aspect">
-                                <input class="aspect_value" id="willpower" disabled="true" type="text" value="{{derived.willpower}}" placeholder="0" data-dtype="Number">
+                                <input class="aspect_value" id="willpower" name="system.aspects.willpower" type="text" value="{{aspects.willpower}}" placeholder="0" data-dtype="Number">
                             </td>
                             <td class="aspects aspect_header">
                                 <label>Initiative</label>
                             </td>
                             <td class="aspect">
-                                <input class="aspect_value" id="initiative" disabled="true" type="text" value="{{derived.initiative}}" placeholder="0" data-dtype="Number">
+                                <input class="aspect_value" id="initiative" name="system.aspects.initiative" type="text" value="{{aspects.initiative}}" placeholder="0" data-dtype="Number">
                             </td>
                         </tr>
                         <tr>
@@ -264,106 +168,174 @@
                                 <label>Wounds</label>
                             </td>
                             <td class="aspect">
-                                <input class="aspect_value" id="wounds" disabled="true" type="text" value="{{derived.wounds}}" placeholder="0" data-dtype="Number">
+                                <input class="aspect_value" id="wounds" name="system.aspects.wounds" type="text" value="{{aspects.wounds}}" placeholder="0" data-dtype="Number">
                             </td>
                             <td class="aspects aspect_header">
                                 <label>Height</label>
                             </td>
                             <td class="aspect">
-                                <input class="aspect_value" id="height" disabled="true" type="text" name="system.aspects.height" value="{{derived.height}}" placeholder="0" data-dtype="Number">
+                                <input class="aspect_value" id="height" type="text" name="system.aspects.height" value="{{aspects.height}}" placeholder="0" data-dtype="Number">
                             </td>
                         </tr>
                     </table>
                 </div>
-            </div>
-            <div>
-                <h1>Skills</h1>
-                <table class="item-list" data-itemtype="skill">
+                <div class="flexcol">
+                    <h3 class="flex0">Skills</h3>
+                    <table class="skill-table item-list" data-itemtype="skill">
+                        <tr>
+                            <th class="max_width">
+                                Name
+                            </th>
+                            <th>
+                                AV
+                            </th>
+                            <th>
+                                Rating
+                            </th>
+                            <th>
+                                Aspect
+                            </th>
+                            <th class="fixed_100">
+                                <a class="additem"><i class="fa fa-plus"></i></a>
+                            </th>
+                        </tr>
+                        {{#each skills as |skill index|}}
+                            <tr class="item" data-itemid="{{skill.uuid}}">
+                                <td>
+                                    <input class="item_data" type="text" data-var="name" value="{{skill.name}}">
+                                </td>
+                                <td>
+                                    {{skill.av}}
+                                </td>
+                                <td>
+                                    <input placeholder="0" class="item_data" type="number" data-var="system.rank" value="{{skill.system.rank}}" width="3">
+                                </td>
+                                <td><select class="item_data" data-var="system.aspect">
+                                        {{#select skill.system.aspect}}
+                                            <option value="Aspect"> </option>
+                                            {{#each ../aspects_list as |a i|}}
+                                                <option value="{{a}}">{{capitalize a}}</option>
+                                            {{/each}}
+                                        {{/select}}
+                                    </select>
+                                </td>
+                                <td class="max_width">
+                                    <a class="createduel"><i class="fa fa-dice"> </i></a>
+                                    <a class="examineitem"><i class="fa fa-circle-info"></i></a>
+                                    <a class="removeitem"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                </div>
+            </div> 
+            <div class="flexcol">
+                <h3>Triggers</h3>
+                <table class="item-list" data-itemtype="trigger">
                     <tr>
-                        <th>
-                            Name
-                        </th>
-                        <th>
-                            AV
-                        </th>
-                        <th>
-                            Rating
-                        </th>
-                        <th>
-                            Aspect
-                        </th>
-                        <th>
-                            <a class="additem"><i class="fa fa-plus"></i></a>
-                        </th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Suit</th>
+                        <th>Skill</th>
+                        <th><a class="additem"><i class="fa fa-plus"></i></a></th>
                     </tr>
-                    {{#each skills as |skill index|}}
-                        <tr class="item" data-itemid="{{skill.uuid}}">
+                    {{#each triggers as |trigger index|}}
+                        <tr class="item" data-itemid="{{trigger.uuid}}">
+                            <td><input placeholder="name" class="item_data" type="text" data-var="name" value="{{trigger.name}}"></td>
+                            <td><input placeholder="desc" class="item_data" type="text" data-var="system.description" value="{{trigger.system.description}}"></td>
                             <td>
-                                <input class="item_data" type="text" data-var="name" value="{{skill.name}}">
-                            </td>
-                            <td>
-                                {{skill.av}}
-                            </td>
-                            <td>
-                                <input placehodler="0" class="item_data" type="number" data-var="system.rank" value="{{skill.system.rank}}">
-                            </td>
-                            <td><select class="item_data" data-var="system.aspect">
-                                    {{#select skill.system.aspect}}
-                                        <option value="Aspect"> </option>
-                                        {{#each ../aspects_list as |a i|}}
-                                            <option value="{{a}}">{{capitalize a}}</option>
+                                <select class="item_data" data-var="system.suit">
+                                    {{#select trigger.system.suit}}
+                                        {{#each ../suits_list as |s|}}
+                                            <option value="{{s}}">{{capitalize s}}</option>
                                         {{/each}}
                                     {{/select}}
                                 </select>
                             </td>
+                            <td><input placehoder="skill" class="item_data" type="text" data-var="system.skill" value="{{trigger.system.skill}}"></td>
                             <td>
-                                <a class="createduel"><i class="fa fa-dice"> </i></a>
-                                <a class="addtrigger"><i class="fa fa-plus"></i></a>
                                 <a class="examineitem"><i class="fa fa-circle-info"></i></a>
                                 <a class="removeitem"><i class="fa fa-trash"></i></a>
-                            </td>
+                            </td>          
                         </tr>
-                        {{#if skill.triggers.length}}
-                            {{#each skill.triggers as |trigger ti|}}
-                                <tr class="item" data-itemid="{{trigger.uuid}}">
-                                    <td><i class="fa carat-right"></i></td>
-                                    <td>
-                                        <input placeholder="name" class="item_data" type="text" data-var="name" value="{{trigger.name}}">
-                                    </td>
-                                    <td>
-                                        <input placeholder="description" class="item_data" type="text" data-var="system.description" value="{{trigger.system.description}}">
-                                    </td>
-                                    <td>
-                                        <select class="item_data" data-var="system.suit">
-                                            {{#select trigger.system.suit}}
-                                                {{#each ../../suits_list as |s|}}
-                                                    <option value="{{s}}">{{capitalize s}}</option>
-                                                {{/each}}
-                                            {{/select}}
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <a class="examineitem"><i class="fa fa-circle-info"></i></a>
-                                        <a class="removeitem"><i class="fa fa-trash"></i></a>
-                                    </td>
-                                </tr>
-                            {{/each}}
-                        {{/if}}
                     {{/each}}
+                </table>
+            </div>
+        </div>
+        <div class="tab flexcol" data-group="primary" data-tab="pursuits">
+            <div class="flexrow">
+                <div>
+                    <h3>Pursuits</h3>
+                    <table class="item-list" data-itemtype="pursuit">
+                        <tr>
+                            <th>Rank</th>
+                            <th class="max_width">Pursuit</th>
+                            <th class="fixed_100"><a class="additem"><i class="fa fa-plus"></i></a></th>
+                        </tr>
+                        {{#each pursuits as |pursuit index|}}
+                            <tr class="item" data-itemid="{{pursuit.uuid}}">
+                                <td>
+                                    <input class="item_data" data-var="system.rank" type="number" value="{{pursuit.system.rank}}">
+                                </td>
+                                <td>
+                                    <input class="item_data" data-var="name" type="text" value="{{pursuit.name}}">
+                                </td>
+                                <td>
+                                    <a class="selectpursuit"><i class="fa fa-star"></i></a>
+                                    <a class="examineitem"><i class="fa fa-circle-info"></i></a>
+                                    <a class="removeitem"><i class="fa fa-trash"></i></a>
+                                </td>    
+                            </tr>
+                        {{/each}}
                     </table>
                 </div>
+                <div>
+                    <h3>Talents</h3>
+                    <table class="item-list" data-itemtype="talent">
+                        <tr>
+                            <th>Talent</th>
+                            <th>Description</th>
+                            <th><a class="additem"><i class="fa fa-plus"></i></a></th>
+                        </tr>
+                        {{#each talents as |talent index|}}
+                            <tr class="item" data-itemid="{{talent.uuid}}">
+                                <td>
+                                    <input class="item_data" data-var="name" type="text" value="{{talent.name}}">
+                                </td>
+                                <td>
+                                    <input class="item_data" data-var="system.description" type="text" value="{{talent.system.description}}">
+                                </td>
+                                <td>
+                                    <a class="examineitem"><i class="fa fa-circle-info"></i></a>
+                                    <a class="removeitem"><i class="fa fa-trash"></i></a>
+                                </td>   
+                            </tr>
+                        {{/each}}
+                    </table>
+                </div>
+            </div>
         </div>
         <div class="tab flexcol" data-group="primary" data-tab="equipment">
-            Defense: {{derived.defense}}
-            Armor: {{derived.armor}}
             <h3>Equipment</h3>
+            <label>You gain +1 to armor for wearing any armor (Light or Heavy). You gain +2 to armor for wearing at least 3 pieces of armor (one must be Heavy). Your defense is reduced by your armor.</label>
+            <label>You can have a max of 3 armor.</label>
+            <div class="flexcol">
+                <div class="flexrow black_header">
+                    <label>Armor</label>
+                    <label>Defense</label>
+                </div>
+                <div class="flexrow">
+                    <center><label>{{derived.armor}}</label></center>
+                    <center><label>{{derived.defense}}</label></center>
+                </div>
+            </div>
             <table class="item-list" data-itemtype="equipment">
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
+                    <th class="max_width">Name</th>
                     <th>Type</th>
                     <th>Equipped</th>
-                    <th><a class="additem"><i class="fa fa-plus"></i></a></th>
+                    <th class="fixed_35"><a class="additem"><i class="fa fa-plus"></i></a></th>
                 </tr>
                 {{#each equipment as |item|}}
                     <tr class="item" data-itemid="{{item.uuid}}">
@@ -381,6 +353,9 @@
                     </tr>
                 {{/each}}
             </table>
+
+        </div>
+        <div class="tab flexcol" data-group="primary" data-tab="magic">
             <h3>Magic</h3>
             <table class="item-list" data-itemtype="magia">
                 <tr>
@@ -393,7 +368,7 @@
                     <th>Resist</th>
                     <th>Range</th>
                     <th>Melee</th>
-                    <th><a class="additem"><i class="fa fa-plus"></i></a></th>
+                    <th class="fixed_35"><a class="additem"><i class="fa fa-plus"></i></a></th>
                 </tr>
                 {{#each magia as |magia|}}
                     <tr class="item" data-itemid="{{magia.uuid}}">
@@ -432,10 +407,10 @@
             </table>
             <table class="item-list" data-itemtype="immuto">
                 <tr>
-                    <th>Origin</th>
-                    <th>Immuto</th>
+                    <th class="fixed_100">Origin</th>
+                    <th class="max_width">Immuto</th>
                     <th>Modifier (TN)</th>
-                    <th><a class="additem"><i class="fa fa-plus"></i></a></th>
+                    <th class="fixed_35"><a class="additem"><i class="fa fa-plus"></i></a></th>
                 </tr>
                 {{#each immuto as |immuto|}}
                     <tr class="item" data-itemid="{{immuto.uuid}}">
@@ -445,7 +420,141 @@
                         <td><a class="examineitem"><i class="fa fa-circle-info"></i></a><a class="removeitem"><i class="fa fa-trash"></i></a></td>
                     </tr>
                 {{/each}}
+            </table>    
+        </div>
+        <div class="tab flexcol" data-group="primary" data-tab="destiny">
+            <h3>Destiny</h3>
+            <table>
+                <tr class="black_header">
+                    <th>
+                        Done
+                    </th>
+                    <th>
+                        Fate
+                    </th>
+                    <th>
+                        Card
+                    </th>
+                </tr>
+                {{#each fate_cards as |fate i|}}
+                    <tr>
+                        <td>
+                            <input name="system.fate_cards.{{i}}.finished" type="checkbox" {{#if fate.finished}}checked{{/if}}>
+                        </td>
+                        <td style="width:75%"><input name="system.fate_cards.{{i}}.fate" value="{{fate.fate}}" type="text"></td>
+                        <td style="text-align:center; display:flex">
+                            {{#if (isjoker fate.suit)}}
+                                <select name="system.fate_cards.{{i}}.value">
+                                    {{#select fate.value}}
+                                        <option value="0">Black</option>
+                                        <option value="14">Red</option>
+                                    {{/select}}
+                                </select>
+                            {{else}}
+                                <input name="system.fate_cards.{{i}}.value" value="{{fate.value}}" size="5" type="number">
+                            {{/if}}
+                            <select class="flex0" name="system.fate_cards.{{i}}.suit">
+                                {{#select fate.suit}}
+                                    <option value="joker">Joker</option>
+                                    {{#each ../suits_list as |choice index|}}
+                                        <option value="{{choice}}">{{capitalize choice}}</option>
+                                    {{/each}}
+                                {{/select}}
+                            </select>
+                        </td>
+                    </tr>
+                {{/each}}
             </table>
+            <h2>Twist Deck</h2>
+            <a class="generate_decks flex0">Generate Decks</a>
+            <div class="flexrow">
+                <div>
+                    <h3>Defining</h3>
+                    <p>1,5,9,13</p>
+                    <select name="system.twist_deck.defining">
+                        {{#select twist_deck.defining}}
+                        {{#each suits_list as |choice index|}}
+                            <option value="{{choice}}">{{capitalize choice}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="suit_target">
+                    <h3>Ascendant</h3>
+                    <p>4,8,12</p>
+                    <select name="system.twist_deck.ascendant">
+                        {{#select twist_deck.ascendant}}
+                        {{#each suits_list as |choice index|}}
+                            <option value="{{choice}}">{{capitalize choice}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+            <div class="flexrow">
+                <div class="suit_target">
+                    <h3>Center</h3>
+                    <p>3,7,11</p>
+                    <select name="system.twist_deck.center">
+                        {{#select twist_deck.center}}
+                        {{#each suits_list as |choice index|}}
+                            <option value="{{choice}}">{{capitalize choice}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="suit_target">
+                    <h3>Descendant</h3>
+                    <p>2,6,10</p>
+                    <select name="system.twist_deck.descendant">
+                        {{#select twist_deck.descendant}}
+                        {{#each suits_list as |choice index|}}
+                            <option value="{{choice}}">{{capitalize choice}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="tab flexrow" data-group="primary" data-tab="combat">
+            <div class="flexcol">
+                <div class="black_header flex0">Wounds</div>
+                <div class="flexrow">
+                    <center>
+                        <input class="small_number_input" name="system.current_wounds" type="number" value="{{actor.system.current_wounds}}">
+                        <label class="flex0">/</label>
+                        <input class="small_number_input" type="number" value="{{aspects.wounds}}" disabled>
+                    </center>
+                </div>
+                <div class="flexrow black_header">
+                    <label>Armor</label>
+                    <label>Defense</label>
+                </div>
+                <div class="flexrow">
+                    <center><label>{{aspects.armor}}</label></center>
+                    <center><label>{{aspects.defense}}</label></center>
+                </div>
+            </div>
+            <div class="flexcol">
+                <table class="item-list" data-itemtype="attack">
+                    <tr class="black_header flex0">
+                        <th>Attack</th>
+                        <th>Skill</th>
+                        <th>Range</th>
+                        <th>Damage</th>
+                        <th></th>
+                    </tr>
+                    {{#each attacks as |attack index|}}
+                        <tr>
+                            <td>{{attack.name}}</td>
+                            <td>{{attack.skill}}</td>
+                            <td>{{attack.range}}{{#if attack.melee}}<i class="fa fa-hand-fist"></i>{{else}}<i class="fa fa-gun"></i>{{/if}}</td>
+                            <td>{{attack.damage}}</td>
+                            <td><a data-skill="{{attack.skill}}" class="rollattackskill"><i class="fa fa-dice"></i></a></td>
+                        </tr>
+                    {{/each}}
+                </table>
+            </div>
         </div>
     </section>
 </form>

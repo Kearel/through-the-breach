@@ -14,34 +14,34 @@ export class FatedActorData extends AutoDerivedActorData {
             fate_cards: new SchemaField(
                 {
                     1: new SchemaField({
+                        finished: new BooleanField({required: true, initial: false}),
                         suit: new StringField({required: true, initial: "Masks"}),
                         value: new NumberField({required: true, initial: 0}),
-                        fate: new StringField({required: true, initial: ""}),
-                        label: new StringField({required: true, initial: "Label"})
+                        fate: new StringField({required: true, initial: ""})
                     }),
                     2: new SchemaField({
+                        finished: new BooleanField({required: true, initial: false}),
                         suit: new StringField({required: true, initial: "Masks"}),
                         value: new NumberField({required: true, initial: 0}),
-                        fate: new StringField({required: true, initial: ""}),
-                        label: new StringField({required: true, initial: "Label"})
+                        fate: new StringField({required: true, initial: ""})
                     }),
                     3: new SchemaField({
+                        finished: new BooleanField({required: true, initial: false}),
                         suit: new StringField({required: true, initial: "Masks"}),
                         value: new NumberField({required: true, initial: 0}),
-                        fate: new StringField({required: true, initial: ""}),
-                        label: new StringField({required: true, initial: "Label"})
+                        fate: new StringField({required: true, initial: ""})
                     }),
                     4: new SchemaField({
+                        finished: new BooleanField({required: true, initial: false}),
                         suit: new StringField({required: true, initial: "Masks"}),
                         value: new NumberField({required: true, initial: 0}),
-                        fate: new StringField({required: true, initial: ""}),
-                        label: new StringField({required: true, initial: "Label"})
+                        fate: new StringField({required: true, initial: ""})
                     }),
                     5: new SchemaField({
+                        finished: new BooleanField({required: true, initial: false}),
                         suit: new StringField({required: true, initial: "Masks"}),
                         value: new NumberField({required: true, initial: 0}),
-                        fate: new StringField({required: true, initial: ""}),
-                        label: new StringField({required: true, initial: "Label"})
+                        fate: new StringField({required: true, initial: ""})
                     })
                 }
                 
@@ -66,14 +66,6 @@ export class FatedActorData extends AutoDerivedActorData {
     {
         super.filterItems();
         this.pursuits = foundry.utils.deepClone(this.parent.itemTypes["pursuit"]);
-        var talents = foundry.utils.deepClone(this.talents);
-        this.pursuits.forEach(pursuit => {
-            var pursuit_talents = talents.filter((talent) => talent.system.origin == pursuit.uuid);
-            console.log(pursuit_talents);
-            talents = talents.filter((talent) => !pursuit_talents.includes(talent));
-            pursuit.talents = pursuit_talents;
-        });
-        this.general_talents = talents;
         this.magia = foundry.utils.deepClone(this.parent.itemTypes["magia"]);
         this.immuto = foundry.utils.deepClone(this.parent.itemTypes["immuto"]);
     }
@@ -193,7 +185,7 @@ export class FatedActorData extends AutoDerivedActorData {
         super.prepareDerivedData();
         if(this.parent.system.current_pursuit != "")
         {
-            this.current_pursuit = fromUUidSync(this.parent.system.current_pursuit);
+            this.current_pursuit = fromUuidSync(this.parent.system.current_pursuit);
         }
         var num_light = 0;
         var num_heavy = 0;

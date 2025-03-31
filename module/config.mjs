@@ -31,7 +31,15 @@ export const aspects = [
     "intellect",
     "charm",
     "cunning",
-    "tenacity"
+    "tenacity",
+    "defense",
+    "walk",
+    "armor",
+    "charge",
+    "willpower",
+    "initiative",
+    "wounds",
+    "height"
 ]
 
 export const body_aspects = [
@@ -48,6 +56,17 @@ export const mind_aspects = [
     "tenacity"
 ]
 
+export const derived_aspects = [
+    "defense",
+    "walk",
+    "armor",
+    "charge",
+    "willpower",
+    "initiative",
+    "wounds",
+    "height"
+]
+
 export const aspect_dictionary = {
     "might" : "Might",
     "grace" : "Grace",
@@ -56,7 +75,15 @@ export const aspect_dictionary = {
     "intellect" : "Intellect",
     "charm" : "Charm",
     "cunning" : "Cunning",
-    "tenacity" : "Tenacity"
+    "tenacity" : "Tenacity",
+    "defense" : "Defense",
+    "walk" : "Walk",
+    "armor" : "Armor",
+    "charge" : "Charge",
+    "willpower" : "Willpower",
+    "initiative" : "Initiative",
+    "wounds" : "Wounds",
+    "height" : "Height"
 }
 
 export const equipment_types = [

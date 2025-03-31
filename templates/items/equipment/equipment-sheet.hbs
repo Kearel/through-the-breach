@@ -44,6 +44,7 @@
             <div class="flexrow">
                 <table class="item-list" data-itemtype="attack">
                     <tr>
+                        <th>Name</th>
                         <th>Melee</th>
                         <th>Range</th>
                         <th>Weak</th>
@@ -54,12 +55,13 @@
                     </tr>
                     {{#each attacks as |attack index|}}
                     <tr class="item" data-index="{{index}}">
-                        <td><input type="checkbox" {{#if attack.melee}}checked{{/if}} {{#if attack.builtin}}name="system.attacks.{{index}}.melee" {{else}} disabled="disabled">{{/if}}</td>
-                        <td><input type="number" value="{{attack.range}}" {{#if attack.builtin}}name="system.attacks.{{index}}.range" {{else}} disabled="disabled">{{/if}}</td>
-                        <td><input type="number" value="{{attack.weak_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.weak_damage" {{else}} disabled="disabled">{{/if}}</td>
-                        <td><input type="number" value="{{attack.moderate_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.moderate_damage" {{else}} disabled="disabled">{{/if}}</td>
-                        <td><input type="number" value="{{attack.severe_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.severe_damage" {{else}} disabled="disabled">{{/if}}</td>
-                        <td><input type="text" value="{{attack.skill}}" {{#if attack.builtin}}name="system.attacks.{{index}}.skill" {{else}} disabled="disabled">{{/if}}</td>
+                        <td><Input type="text" value="{{attack.name}}" {{#if attack.builtin}}name="system.attacks.{{index}}.name" {{else}} disabled="disabled"{{/if}}></td>
+                        <td><input type="checkbox" {{#if attack.melee}}checked{{/if}} {{#if attack.builtin}}name="system.attacks.{{index}}.melee" {{else}} disabled="disabled"{{/if}}></td>
+                        <td><input type="number" value="{{attack.range}}" {{#if attack.builtin}}name="system.attacks.{{index}}.range" {{else}} disabled="disabled"{{/if}}></td>
+                        <td><input type="number" value="{{attack.weak_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.weak_damage" {{else}} disabled="disabled"{{/if}}></td>
+                        <td><input type="number" value="{{attack.moderate_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.moderate_damage" {{else}} disabled="disabled"{{/if}}></td>
+                        <td><input type="number" value="{{attack.severe_damage}}" {{#if attack.builtin}}name="system.attacks.{{index}}.severe_damage" {{else}} disabled="disabled"{{/if}}></td>
+                        <td><input type="text" value="{{attack.skill}}" {{#if attack.builtin}}name="system.attacks.{{index}}.skill" {{else}} disabled="disabled"{{/if}}></td>
                         {{#if attack.builtin}}<td><a class="removerow"><i class="fas fa-trash"></i></a></td>{{/if}}
                     </tr>
                     {{/each}}

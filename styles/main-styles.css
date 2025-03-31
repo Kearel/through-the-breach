@@ -7,6 +7,12 @@ div.left_panel {
     width:50%;
 }
 
+.black_header {
+    background-color: black;
+    color:white;
+    text-align:center;
+}
+
 td.aspect_header {
     background-color: black;
     color:white;
@@ -80,4 +86,43 @@ input.aspect_header{
 {
     float:right;
     width:75%;
+}
+
+.pad_right_5
+{
+    border-spacing:5px;
+}
+
+.small_number_input
+{
+    max-width:50px;
+    min-width:50px;
+}
+
+.max_width
+{
+    width:100%;
+}
+
+.fixed_100
+{
+    min-width:100px;
+}
+
+.fixed_35
+{
+    min-width:35px;
+}
+
+.profile {
+    max-height: 128px;
+    width: 128px;
+    max-width: 128px;
+    overflow: hidden;
+}
+
+.skill-table {
+    display: block;
+    overflow-y:scroll;
+    max-height:325px;
 }

@@ -127,6 +127,9 @@ Hooks.once("init", () => {
             label: "TTB.Immuto"
         }
     );
+    Handlebars.registerHelper('isjoker', function(str) {
+        return str == "joker";
+    })
     Handlebars.registerHelper('capitalize', function(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     });

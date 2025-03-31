@@ -105,6 +105,7 @@ export class EquipmentSheet extends SheetWithRowsMixin(ItemSheet)
             case "attack":
                 const attacks = foundry.utils.deepClone(this.item.system.attacks);
                 attacks.push({
+                    name: "Attack",
                     melee: true,
                     range: 1,
                     weak_damage: 1,
